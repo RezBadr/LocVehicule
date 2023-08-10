@@ -14,6 +14,19 @@ if (function_exists("afficher_vehicule") === FALSE) {
         }
     }
 }
+if (function_exists("rechecher_vehicule") === FALSE) {
+    function rechercher_vechicule($idveh)
+    {
+        if (require("connection.php")) {
+            $stmt = $mysqli->prepare("SELECT * FROM vehicle WHERE IDvehicule = $idveh");
+            $stmt->execute();
+
+            $result = $stmt->get_result();
+
+            return $result;
+        }
+    }
+}
 if (function_exists("ajouter_date_agence") === FALSE) {
     function ajouter_date_agence($date_depart, $agence, $date_retour, $nbrJrs)
     {

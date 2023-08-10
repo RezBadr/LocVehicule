@@ -4,19 +4,28 @@ include("./assets/php/commandes.php");
 $link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 $idreservation = explode("+", $link)[1];
 $idveh = explode("+", $link)[2];
-$prix_jr = explode("+", $link)[3];
-$prix_jr = intval($prix_jr);
 $idreservation = intval($idreservation);
 $idveh = intval($idveh);
 
 $resultat = afficher_reservation($idreservation);
+$vehicule = rechercher_vechicule($idveh)->fetch_assoc();
 $nbrJrs = $resultat['nombreJours'];
+$image = base64_encode($vehicule['image']);
+$marque = $vehicule["marque"];
+$modele = $vehicule["modele"];
+$categorie = $vehicule["categorie"];
+$fuelType = $vehicule["fuelType"];
+$prix_jr = $vehicule["dailyPrice"];
 
+$datedepart = $resultat["DateDepart"];
+$agence = $resultat["agence"];
+$dateretour = $resultat["DateRetour"];
 $TTC = $prix_jr * $nbrJrs;
+$TVA = $TTC * 0.2;
+$HT = $TTC - $TVA;
 
 ajouter_reservation($idveh, $TTC, $idreservation);
-$vehicule = afficher_vechicule($idveh)->fetch_assoc();
-$image = base64_encode($vehicule['image']);
+
 
 
 ?>
@@ -33,7 +42,7 @@ $image = base64_encode($vehicule['image']);
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <title>Resume</title>
 
     <!-- Bootstrap core CSS -->
@@ -73,24 +82,89 @@ https://templatemo.com/tm-564-plot-listing
             <div class="row">
                 <div class="col-lg-12">
                     <div class="inner-content">
-                        <div class="row">
+                        <div class="row" style="padding: 15px;">
                             <div class="col-lg-6">
                                 <div class="container">
-                                    <div class="">
-                                        <img src="data:image/jpeg;base64,<?php echo $image; ?>" alt=""
-                                            class="bd-placeholder-img card-img-top" width="100%" height="300px">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Card title</h5>
-                                            <p class="card-text">This card has supporting text below as a natural
-                                                lead-in to additional content.</p>
-                                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins
-                                                    ago</small></p>
+                                    <div class="col  order-md-last">
+                                        <div class=" d-flex justify-content-between align-items-center mb-3">
+                                            <img src=" data:image/jpeg;base64,<?php echo $image; ?>" alt="" width="90%"
+                                                height="150px">
                                         </div>
+                                        <ul class="list-group mb-3">
+                                            <li class="list-group-item d-flex justify-content-between lh-sm">
+                                                <div>
+                                                    <h6 class="my-0"><?php echo $marque; ?></h6>
+                                                    <small class="text-body-secondary"><?php echo $modele; ?></small>
+                                                </div>
+                                                <span class="text-body-secondary"> <?php echo $prix_jr; ?> MAD /
+                                                    Jour</span>
+                                            </li>
+                                            <li class="list-group-item d-flex justify-content-between lh-sm">
+                                                <div>
+                                                    <h6 class="my-0">De <?php echo $datedepart; ?> A
+                                                        <?php echo $dateretour; ?></h6>
+
+                                                    <small class="text-body-secondary">Agence
+                                                        <?php echo $agence; ?></small>
+                                                </div>
+                                                <span class="text-body-secondary"> <?php echo $nbrJrs; ?> jours</span>
+                                            </li>
+                                            <li class="list-group-item d-flex justify-content-between lh-sm">
+                                                <div>
+                                                    <h6 class="my-0">HT </h6>
+
+                                                </div>
+                                                <span class="text-body-secondary"><?php echo $HT; ?> MAD</span>
+                                            </li>
+                                            <li class="list-group-item d-flex justify-content-between lh-sm">
+                                                <div>
+                                                    <h6 class="my-0">TVA (20%)</h6>
+                                                </div>
+                                                <span class="text-body-secondary"><?php echo $TVA; ?> MAD</span>
+                                            </li>
+                                            <?php
+
+                                            if (isset($_GET['promo'])) {
+                                                $promocode = $_GET['promocode'];
+                                                if ($promocode === "LIVE") {
+                                                    $TTC = $TTC - ($TTC * 0.05);
+                                                    echo '
+
+                                                    <li class="list-group-item d-flex justify-content-between bg-body-tertiary">
+                                                        <div class="text-success">
+                                                            <h6 class="my-0">Promo code</h6>
+                                                            
+                                                        </div>
+                                                        <span class="text-success">−' . ($TTC * 0.05) . ' MAD</span>
+                                                    </li>
+
+                                                ';
+                                                } else {
+                                                    echo "<script>alert('Le code est inncorecte.')</script>";
+                                                }
+                                            }
+                                            ?>
+
+                                            <li class="list-group-item d-flex justify-content-between">
+                                                <span>Total </span>
+                                                <strong><?php echo $TTC; ?></strong>
+                                            </li>
+                                        </ul>
+
+                                        <form class="card p-2" method="get">
+                                            <div class="input-group">
+                                                <input type="text" name="promocode" class="form-control"
+                                                    placeholder="Promo code">
+                                                <button type="submit" name="promo"
+                                                    class="btn btn-secondary">Redeem</button>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
 
                             </div>
                             <div class="col-lg-6 align-self-center">
+                                <h3 class="display-6 fw-bold text-body-emphasis">Vos données de réservation</h3>
                                 <form id="contact" action="" method="">
                                     <div class="row">
                                         <div class="col-lg-6">
@@ -105,7 +179,12 @@ https://templatemo.com/tm-564-plot-listing
                                                     autocomplete="on" required>
                                             </fieldset>
                                         </div>
-
+                                        <div class="col-lg-6">
+                                            <fieldset>
+                                                <input type="text" name="cine" id="cine" placeholder="N° CINE"
+                                                    autocomplete="on" required>
+                                            </fieldset>
+                                        </div>
                                         <div class="col-lg-12">
                                             <fieldset>
                                                 <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*"
@@ -130,16 +209,11 @@ https://templatemo.com/tm-564-plot-listing
                                                     required="">
                                             </fieldset>
                                         </div>
-                                        <div class="col-lg-12">
-                                            <fieldset>
-                                                <textarea name="message" type="text" class="form-control" id="message"
-                                                    placeholder="Message" required=""></textarea>
-                                            </fieldset>
-                                        </div>
+
                                         <div class="col-lg-12">
                                             <fieldset>
                                                 <button type="submit" id="form-submit" class="main-button "><i
-                                                        class="fa fa-paper-plane"></i> Send Message</button>
+                                                        class="bi bi-cart-dash-fill"></i>Continuer au checkout</button>
                                             </fieldset>
                                         </div>
                                     </div>

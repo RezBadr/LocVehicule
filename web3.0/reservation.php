@@ -128,7 +128,7 @@ $nbr_jour = $resultat['nombreJours'];
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group" role="group" aria-label="Default button group">
                                         <button type="submit" name="reserver" class="btn btn-sm btn-outline-secondary"
-                                            onclick="location.href='../resume.php/+<?php echo $idreservation; ?>+<?php echo $idvehicule; ?>+<?php echo $prix; ?>'">Réserver
+                                            onclick="location.href='../resume.php/+<?php echo $idreservation; ?>+<?php echo $idvehicule; ?>'">Réserver
                                             ce véhicule</button>
                                         <button type=" button" class="btn btn-sm btn-outline-secondary"
                                             onclick="MontantTotal(<?php echo $nbr_jour; ?>,<?php echo $prix; ?>)">Voir
