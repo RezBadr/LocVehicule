@@ -8,7 +8,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 
     <title>Plot Listing Page</title>
 
@@ -81,881 +83,224 @@ https://templatemo.com/tm-564-plot-listing
             <div class="row">
                 <div class="col-lg-8">
                     <div class="top-text header-text">
-                        <h6>Check Out Our Listings</h6>
-                        <h2>Item listings of Different Categories</h2>
+                        <h2>Découvrez notre gamme de véhicules utilitaires </h2>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="listing-page">
+    <div class="category-post">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="naccs">
                         <div class="grid">
                             <div class="row">
-                                <div class="col-lg-3">
-                                    <div class="menu">
+                                <div class="col-lg-12 align-items-center">
+                                    <div class="menu d-flex justify-content-center">
                                         <div class="first-thumb active">
                                             <div class="thumb">
-                                                <span class="icon"><img src="assets/images/search-icon-01.png" alt=""></span>
-                                                Apartments
+                                                <span class="icon"><img src="assets/images/voiture-de-livraison.png"
+                                                        alt="">
+                                                    <h4>vehicules-utilitaires</h4>
+                                                </span>
                                             </div>
                                         </div>
                                         <div>
                                             <div class="thumb">
-                                                <span class="icon"><img src="assets/images/search-icon-02.png" alt=""></span>
-                                                Food &amp; Life
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="thumb">
-                                                <span class="icon"><img src="assets/images/search-icon-03.png" alt=""></span>
-                                                Cars
+                                                <span class="icon"><img src="assets/images/cars.png" alt="">
+                                                    <h4>Plusieurs voitures</h4>
+                                                </span>
                                             </div>
                                         </div>
                                         <div class="last-thumb">
                                             <div class="thumb">
-                                                <span class="icon"><img src="assets/images/search-icon-04.png" alt=""></span>
-                                                Traveling
+                                                <span class="icon"><img src="assets/images/vehicule.png" alt="">
+                                                    <h4> pick up</h4>
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-9">
+                                <div class="col-lg-12">
                                     <ul class="nacc">
-                                        <!-- first category listing of items -->
                                         <li class="active">
                                             <div>
-                                                <div class="col-lg-12">
-                                                    <div class="owl-carousel owl-listing">
-                                                        <div class="item">
-                                                            <div class="row">
-                                                                <div class="col-lg-12">
-                                                                    <div class="listing-item">
-                                                                        <div class="left-image">
-                                                                            <a href="#"><img src="assets/images/listing-01.jpg" alt=""></a>
-                                                                            <div class="hover-content">
-                                                                                <div class="main-white-button">
-                                                                                    <a href="contact.html"><i class="fa fa-eye"></i>
-                                                                                        Contact Now</a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="right-content align-self-center">
-                                                                            <a href="#">
-                                                                                <h4>Sunshine Paradise Apartment</h4>
-                                                                            </a>
-                                                                            <h6>by: Real ESTATE Agent</h6>
-                                                                            <span class="price">
-                                                                                <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $600 / month
-                                                                                included tax
-                                                                            </span>
-                                                                            <span class="details">Details: <em>860 sq
-                                                                                    ft</em></span>
-                                                                            <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-12">
-                                                                    <div class="listing-item">
-                                                                        <div class="left-image">
-                                                                            <a href="#"><img src="assets/images/listing-02.jpg" alt=""></a>
-                                                                            <div class="hover-content">
-                                                                                <div class="main-white-button">
-                                                                                    <a href="contact.html"><i class="fa fa-eye"></i>
-                                                                                        Contact Now</a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="right-content align-self-center">
-                                                                            <a href="#">
-                                                                                <h4>Best one in this category</h4>
-                                                                            </a>
-                                                                            <h6>by: Real ESTATE Agent</h6>
-                                                                            <span class="price">
-                                                                                <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $800 / month
-                                                                                included tax
-                                                                            </span>
-                                                                            <span class="details">Details: <em>860 sq
-                                                                                    ft</em></span>
-                                                                            <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-12">
-                                                                    <div class="listing-item">
-                                                                        <div class="left-image">
-                                                                            <a href="#"><img src="assets/images/listing-03.jpg" alt=""></a>
-                                                                            <div class="hover-content">
-                                                                                <div class="main-white-button">
-                                                                                    <a href="contact.html"><i class="fa fa-eye"></i>
-                                                                                        Contact Now</a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="right-content align-self-center">
-                                                                            <a href="#">
-                                                                                <h4>Amazing Dj Party House</h4>
-                                                                            </a>
-                                                                            <h6>by: Real ESTATE Agent</h6>
-                                                                            <span class="price">
-                                                                                <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $950 / month
-                                                                                included tax
-                                                                            </span>
-                                                                            <span class="details">Details: <em>860 sq
-                                                                                    ft</em></span>
-                                                                            <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="item">
-                                                            <div class="row">
-                                                                <div class="col-lg-12">
-                                                                    <div class="listing-item">
-                                                                        <div class="left-image">
-                                                                            <a href="#"><img src="assets/images/listing-01.jpg" alt=""></a>
-                                                                            <div class="hover-content">
-                                                                                <div class="main-white-button">
-                                                                                    <a href="contact.html"><i class="fa fa-eye"></i>
-                                                                                        Contact Now</a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="right-content align-self-center">
-                                                                            <a href="#">
-                                                                                <h4>Sunshine Villa Condo</h4>
-                                                                            </a>
-                                                                            <h6>by: Real ESTATE Agent</h6>
-                                                                            <span class="price">
-                                                                                <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $450 / month
-                                                                                included tax
-                                                                            </span>
-                                                                            <span class="details">Details: <em>860 sq
-                                                                                    ft</em></span>
-                                                                            <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-12">
-                                                                    <div class="listing-item">
-                                                                        <div class="left-image">
-                                                                            <a href="#"><img src="assets/images/listing-02.jpg" alt=""></a>
-                                                                            <div class="hover-content">
-                                                                                <div class="main-white-button">
-                                                                                    <a href="contact.html"><i class="fa fa-eye"></i>
-                                                                                        Contact Now</a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="right-content align-self-center">
-                                                                            <a href="#">
-                                                                                <h4>Gaming Studio Units</h4>
-                                                                            </a>
-                                                                            <h6>by: Real ESTATE Agent</h6>
-                                                                            <span class="price">
-                                                                                <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $550 / month
-                                                                                included tax
-                                                                            </span>
-                                                                            <span class="details">Details: <em>860 sq
-                                                                                    ft</em></span>
-                                                                            <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-12">
-                                                                    <div class="listing-item">
-                                                                        <div class="left-image">
-                                                                            <a href="#"><img src="assets/images/listing-03.jpg" alt=""></a>
-                                                                            <div class="hover-content">
-                                                                                <div class="main-white-button">
-                                                                                    <a href="contact.html"><i class="fa fa-eye"></i>
-                                                                                        Contact Now</a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="right-content align-self-center">
-                                                                            <a href="#">
-                                                                                <h4>Amazing Dj Party House</h4>
-                                                                            </a>
-                                                                            <h6>by: Real ESTATE Agent</h6>
-                                                                            <span class="price">
-                                                                                <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $650 / month
-                                                                                included tax
-                                                                            </span>
-                                                                            <span class="details">Details: <em>860 sq
-                                                                                    ft</em></span>
-                                                                            <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                <div class="thumb">
+                                                    <div class="row">
+                                                        <div class="col-lg-12" style="margin-top: 30px;">
+                                                            <h1 style="text-align: center;">Location
+                                                                utilitaire LLD pour ENTREPRISES</h1>
+                                                            <hr>
+                                                            <p>Leadeur de la location de véhicules utilitaires pour
+                                                                entreprises au Maroc, GetCarNow accompagne au
+                                                                quotidien les TPE, PME et grandes entreprises dans la
+                                                                gestion de leurs parc de véhicules utilitaires type
+                                                                fourgon, pick-up ou camion.
+                                                                GetCarNow vous propose des formules de locations de
+                                                                1é à 60 mois pour vos besoins en fourgonnettes ou
+                                                                camionnettes jusqu'a 3,5 T </p>
+
                                                         </div>
 
-                                                        <!-- third page of first category -->
-                                                        <div class="item">
-                                                            <div class="row">
-                                                                <div class="col-lg-12">
-                                                                    <div class="listing-item">
-                                                                        <div class="left-image">
-                                                                            <a href="#"><img src="assets/images/listing-01.jpg" alt=""></a>
-                                                                            <div class="hover-content">
-                                                                                <div class="main-white-button">
-                                                                                    <a href="contact.html"><i class="fa fa-eye"></i>
-                                                                                        Contact Now</a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="right-content align-self-center">
-                                                                            <a href="#">
-                                                                                <h4>Third Page Apartment</h4>
-                                                                            </a>
-                                                                            <h6>by: Real Estate Agent</h6>
-                                                                            <span class="price">
-                                                                                <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $600 to $950 /
-                                                                                month included tax
-                                                                            </span>
-                                                                            <span class="details">Details: <em>860 sq
-                                                                                    ft</em></span>
-                                                                            <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-12">
-                                                                    <div class="listing-item">
-                                                                        <div class="left-image">
-                                                                            <a href="#"><img src="assets/images/listing-02.jpg" alt=""></a>
-                                                                            <div class="hover-content">
-                                                                                <div class="main-white-button">
-                                                                                    <a href="contact.html"><i class="fa fa-eye"></i>
-                                                                                        Contact Now</a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="right-content align-self-center">
-                                                                            <a href="#">
-                                                                                <h4>New Gaming Townhouse</h4>
-                                                                            </a>
-                                                                            <h6>by: Real ESTATE Agent</h6>
-                                                                            <span class="price">
-                                                                                <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $840 / month
-                                                                                included tax
-                                                                            </span>
-                                                                            <span class="details">Details: <em>860 sq
-                                                                                    ft</em></span>
-                                                                            <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-12">
-                                                                    <div class="listing-item">
-                                                                        <div class="left-image">
-                                                                            <a href="#"><img src="assets/images/listing-03.jpg" alt=""></a>
-                                                                            <div class="hover-content">
-                                                                                <div class="main-white-button">
-                                                                                    <a href="contact.html"><i class="fa fa-eye"></i>
-                                                                                        Contact Now</a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="right-content align-self-center">
-                                                                            <a href="#">
-                                                                                <h4>Amazing Party Villa</h4>
-                                                                            </a>
-                                                                            <h6>by: Real ESTATE Agent</h6>
-                                                                            <span class="price">
-                                                                                <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $950 / month
-                                                                                included tax
-                                                                            </span>
-                                                                            <span class="details">Details: <em>860 sq
-                                                                                    ft</em></span>
-                                                                            <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </li>
-
-                                        <!-- second category listing of items -->
                                         <li>
                                             <div>
-                                                <div class="col-lg-12">
-                                                    <div class="owl-carousel owl-listing">
-                                                        <div class="item">
-                                                            <div class="row">
-                                                                <div class="col-lg-12">
-                                                                    <div class="listing-item">
-                                                                        <div class="left-image">
-                                                                            <a href="#"><img src="assets/images/listing-04.jpg" alt=""></a>
-                                                                            <div class="hover-content">
-                                                                                <div class="main-white-button">
-                                                                                    <a href="contact.html"><i class="fa fa-eye"></i>
-                                                                                        Contact Now</a>
+                                                <div class="thumb">
+                                                    <div class="row">
+                                                        <div class="album py-5 bg-body-tertiary">
+                                                            <div class="container">
+
+
+                                                                <div
+                                                                    class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                                                                    <?php
+                                                                    include("./assets/php/connection.php");
+                                                                    include("./assets/php/commandes.php");
+                                                                    $cat2 = "Citadine";
+                                                                    $result2 = rechercher_vechicule_categorie($cat2);
+                                                                    while (null !== ($vehicule = mysqli_fetch_assoc($result2))) {
+                                                                        $image = base64_encode($vehicule["image"]);
+                                                                        $marque = $vehicule["marque"];
+                                                                        $modele = $vehicule["modele"];
+                                                                        $prix = $vehicule["dailyPrice"];
+                                                                        $categorie = $vehicule["categorie"];
+                                                                        $fuelType = $vehicule["fuelType"];
+                                                                        $idvehicule = $vehicule["IDvehicule"];
+                                                                    ?>
+
+
+                                                                    <div class="col">
+                                                                        <div class="card shadow-sm">
+                                                                            <img src="data:image/jpeg;base64,<?php echo $image; ?>"
+                                                                                alt="Image"
+                                                                                class="bd-placeholder-img card-img-top"
+                                                                                width="255" height="225">
+                                                                            <div class="card-body">
+                                                                                <h4><?php echo  $marque . '  ' . $modele; ?>
+                                                                                </h4>
+                                                                                <p><?php echo  $categorie . ' | ' . $modele . ' | ' . $fuelType; ?>
+                                                                                </p>
+                                                                                <span
+                                                                                    class="text-body-secondary"><?php echo $prix; ?>
+                                                                                    MAD / Jour</span>
+                                                                                <div
+                                                                                    class="d-flex justify-content-between align-items-center">
+                                                                                    <div class="btn-group" role="group"
+                                                                                        aria-label="Default button group">
+                                                                                        <button type="submit"
+                                                                                            name="reserver"
+                                                                                            class="btn btn-sm btn-outline-secondary"
+                                                                                            onclick="location.href='../resume.php/+<?php echo $idvehicule; ?>'">Réserver
+                                                                                            ce véhicule</button>
+                                                                                    </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="right-content align-self-center">
-                                                                            <a href="#">
-                                                                                <h4>Food First page</h4>
-                                                                            </a>
-                                                                            <h6>by: Food Delivery</h6>
-                                                                            <span class="price">
-                                                                                <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $600 / month
-                                                                                included tax
-                                                                            </span>
-                                                                            <span class="details">Details: <em>860 sq
-                                                                                    ft</em></span>
-                                                                            <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-                                                                        </div>
                                                                     </div>
-                                                                </div>
-                                                                <div class="col-lg-12">
-                                                                    <div class="listing-item">
-                                                                        <div class="left-image">
-                                                                            <a href="#"><img src="assets/images/listing-05.jpg" alt=""></a>
-                                                                            <div class="hover-content">
-                                                                                <div class="main-white-button">
-                                                                                    <a href="contact.html"><i class="fa fa-eye"></i>
-                                                                                        Contact Now</a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="right-content align-self-center">
-                                                                            <a href="#">
-                                                                                <h4>Food Item 2</h4>
-                                                                            </a>
-                                                                            <h6>by: Food Delivery</h6>
-                                                                            <span class="price">
-                                                                                <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $540 / month
-                                                                                included tax
-                                                                            </span>
-                                                                            <span class="details">Details: <em>860 sq
-                                                                                    ft</em></span>
-                                                                            <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-12">
-                                                                    <div class="listing-item">
-                                                                        <div class="left-image">
-                                                                            <a href="#"><img src="assets/images/listing-03.jpg" alt=""></a>
-                                                                            <div class="hover-content">
-                                                                                <div class="main-white-button">
-                                                                                    <a href="contact.html"><i class="fa fa-eye"></i>
-                                                                                        Contact Now</a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="right-content align-self-center">
-                                                                            <a href="#">
-                                                                                <h4>Food Item 3</h4>
-                                                                            </a>
-                                                                            <h6>by: Food Delivery</h6>
-                                                                            <span class="price">
-                                                                                <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $720 / month
-                                                                                included tax
-                                                                            </span>
-                                                                            <span class="details">Details: <em>860 sq
-                                                                                    ft</em></span>
-                                                                            <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-                                                                        </div>
-                                                                    </div>
+
+                                                                    <?php } ?>
                                                                 </div>
                                                             </div>
                                                         </div>
-
-                                                        <!-- second category second page -->
-                                                        <div class="item">
-                                                            <div class="row">
-                                                                <div class="col-lg-12">
-                                                                    <div class="listing-item">
-                                                                        <div class="left-image">
-                                                                            <a href="#"><img src="assets/images/listing-05.jpg" alt=""></a>
-                                                                            <div class="hover-content">
-                                                                                <div class="main-white-button">
-                                                                                    <a href="contact.html"><i class="fa fa-eye"></i>
-                                                                                        Contact Now</a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="right-content align-self-center">
-                                                                            <a href="#">
-                                                                                <h4>FOOD Second Page</h4>
-                                                                            </a>
-                                                                            <h6>by: Food Delivery</h6>
-                                                                            <span class="price">
-                                                                                <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $420 / month
-                                                                                included tax
-                                                                            </span>
-                                                                            <span class="details">Details: <em>860 sq
-                                                                                    ft</em></span>
-                                                                            <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-12">
-                                                                    <div class="listing-item">
-                                                                        <div class="left-image">
-                                                                            <a href="#"><img src="assets/images/listing-04.jpg" alt=""></a>
-                                                                            <div class="hover-content">
-                                                                                <div class="main-white-button">
-                                                                                    <a href="contact.html"><i class="fa fa-eye"></i>
-                                                                                        Contact Now</a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="right-content align-self-center">
-                                                                            <a href="#">
-                                                                                <h4>Best Food Item 5</h4>
-                                                                            </a>
-                                                                            <h6>by: Food Delivery</h6>
-                                                                            <span class="price">
-                                                                                <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $450 / month
-                                                                                included tax
-                                                                            </span>
-                                                                            <span class="details">Details: <em>860 sq
-                                                                                    ft</em></span>
-                                                                            <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-12">
-                                                                    <div class="listing-item">
-                                                                        <div class="left-image">
-                                                                            <a href="#"><img src="assets/images/listing-03.jpg" alt=""></a>
-                                                                            <div class="hover-content">
-                                                                                <div class="main-white-button">
-                                                                                    <a href="contact.html"><i class="fa fa-eye"></i>
-                                                                                        Contact Now</a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="right-content align-self-center">
-                                                                            <a href="#">
-                                                                                <h4>Amazing Food Item 6</h4>
-                                                                            </a>
-                                                                            <h6>by: Food Delivery</h6>
-                                                                            <span class="price">
-                                                                                <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $500 / month
-                                                                                included tax
-                                                                            </span>
-                                                                            <span class="details">Details: <em>860 sq
-                                                                                    ft</em></span>
-                                                                            <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
 
                                                     </div>
                                                 </div>
                                             </div>
                                         </li>
-
-                                        <!-- third category first page -->
                                         <li>
                                             <div>
-                                                <div class="col-lg-12">
-                                                    <div class="owl-carousel owl-listing">
-                                                        <div class="item">
-                                                            <div class="row">
-                                                                <div class="col-lg-12">
-                                                                    <div class="listing-item">
-                                                                        <div class="left-image">
-                                                                            <a href="#"><img src="assets/images/listing-05.jpg" alt=""></a>
-                                                                            <div class="hover-content">
-                                                                                <div class="main-white-button">
-                                                                                    <a href="contact.html"><i class="fa fa-eye"></i>
-                                                                                        Contact Now</a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="right-content align-self-center">
-                                                                            <a href="#">
-                                                                                <h4>Third Category First Page</h4>
-                                                                            </a>
-                                                                            <h6>by: Sale Agent</h6>
-                                                                            <span class="price">
-                                                                                <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $750 / month
-                                                                                included tax
-                                                                            </span>
-                                                                            <span class="details">Details: <em>860 sq
-                                                                                    ft</em></span>
-                                                                            <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-12">
-                                                                    <div class="listing-item">
-                                                                        <div class="left-image">
-                                                                            <a href="#"><img src="assets/images/listing-04.jpg" alt=""></a>
-                                                                            <div class="hover-content">
-                                                                                <div class="main-white-button">
-                                                                                    <a href="contact.html"><i class="fa fa-eye"></i>
-                                                                                        Contact Now</a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="right-content align-self-center">
-                                                                            <a href="#">
-                                                                                <h4>Car Item 2</h4>
-                                                                            </a>
-                                                                            <h6>by: Sale Agent</h6>
-                                                                            <span class="price">
-                                                                                <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $880 / month
-                                                                                included tax
-                                                                            </span>
-                                                                            <span class="details">Details: <em>860 sq
-                                                                                    ft</em></span>
-                                                                            <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-12">
-                                                                    <div class="listing-item">
-                                                                        <div class="left-image">
-                                                                            <a href="#"><img src="assets/images/listing-03.jpg" alt=""></a>
-                                                                            <div class="hover-content">
-                                                                                <div class="main-white-button">
-                                                                                    <a href="contact.html"><i class="fa fa-eye"></i>
-                                                                                        Contact Now</a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="right-content align-self-center">
-                                                                            <a href="#">
-                                                                                <h4>Car Item 3</h4>
-                                                                            </a>
-                                                                            <h6>by: Sale Agent</h6>
-                                                                            <span class="price">
-                                                                                <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $770 / month
-                                                                                included tax
-                                                                            </span>
-                                                                            <span class="details">Details: <em>860 sq
-                                                                                    ft</em></span>
-                                                                            <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-                                                                        </div>
+                                                <div class="thumb">
+                                                    <div class="row">
+                                                        <div class="col-lg-12">
+                                                            <div class="general-info">
+                                                                <div class="row">
+                                                                    <div class="col-lg-12" style="margin-top: 30px;">
+                                                                        <h1 style=" text-align: center;">LOUEZ VOTRE
+                                                                            PICK-UP AU MAROC À LA JOURNÉE, À
+                                                                            LA SEMAINE, AU MOIS,</h1>
+                                                                        <hr>
+                                                                        <p>Offre de location de Pick up à Casablanca et
+                                                                            partout au Maroc pour les professionnels et
+                                                                            particuliers.
+                                                                            GetCarNow leader marocain de la location de
+                                                                            véhicules utilitaires vous propose un
+                                                                            catalogue de Pick-up en simple cabine ou en
+                                                                            double cabine 4X4. Avec leurs Puissances,
+                                                                            robustesses et leur grand volume de
+                                                                            chargement, les Pick Up simple ou double
+                                                                            cabine 4x4 sont des véhicules adéquats pour
+                                                                            vous accompagner dans toutes vos tâches
+                                                                            quotidiennes, même les plus extrêmes ! </p>
+
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        <div class="album py-5 bg-body-tertiary">
+                                                            <div class="container">
 
-                                                        <!-- third category second page -->
-                                                        <div class="item">
-                                                            <div class="row">
-                                                                <div class="col-lg-12">
-                                                                    <div class="listing-item">
-                                                                        <div class="left-image">
-                                                                            <a href="#"><img src="assets/images/listing-01.jpg" alt=""></a>
-                                                                            <div class="hover-content">
-                                                                                <div class="main-white-button">
-                                                                                    <a href="contact.html"><i class="fa fa-eye"></i>
-                                                                                        Contact Now</a>
+
+                                                                <div
+                                                                    class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                                                                    <?php
+                                                                    $cat2 = "Premium";
+                                                                    $result2 = rechercher_vechicule_categorie($cat2);
+                                                                    while (null !== ($vehicule = mysqli_fetch_assoc($result2))) {
+                                                                        $image = base64_encode($vehicule["image"]);
+                                                                        $marque = $vehicule["marque"];
+                                                                        $modele = $vehicule["modele"];
+                                                                        $prix = $vehicule["dailyPrice"];
+                                                                        $categorie = $vehicule["categorie"];
+                                                                        $fuelType = $vehicule["fuelType"];
+                                                                        $idvehicule = $vehicule["IDvehicule"];
+                                                                    ?>
+
+
+                                                                    <div class="col">
+                                                                        <div class="card shadow-sm">
+                                                                            <img src="data:image/jpeg;base64,<?php echo $image; ?>"
+                                                                                alt="Image"
+                                                                                class="bd-placeholder-img card-img-top"
+                                                                                width="255" height="225">
+                                                                            <div class="card-body">
+                                                                                <h4><?php echo  $marque . '  ' . $modele; ?>
+                                                                                </h4>
+                                                                                <p><?php echo  $categorie . ' | ' . $modele . ' | ' . $fuelType; ?>
+                                                                                </p>
+                                                                                <span
+                                                                                    class="text-body-secondary"><?php echo $prix; ?>
+                                                                                    MAD / Jour</span>
+                                                                                <div
+                                                                                    class="d-flex justify-content-between align-items-center">
+                                                                                    <div class="btn-group" role="group"
+                                                                                        aria-label="Default button group">
+                                                                                        <button type="submit"
+                                                                                            name="reserver"
+                                                                                            class="btn btn-sm btn-outline-secondary"
+                                                                                            onclick="location.href='../resume.php/+<?php echo $idvehicule; ?>'">Réserver
+                                                                                            ce véhicule</button>
+                                                                                    </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="right-content align-self-center">
-                                                                            <a href="#">
-                                                                                <h4>Third Category Second Page</h4>
-                                                                            </a>
-                                                                            <h6>by: Sale Agent</h6>
-                                                                            <span class="price">
-                                                                                <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $660 / month
-                                                                                included tax
-                                                                            </span>
-                                                                            <span class="details">Details: <em>860 sq
-                                                                                    ft</em></span>
-                                                                            <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-                                                                        </div>
                                                                     </div>
-                                                                </div>
-                                                                <div class="col-lg-12">
-                                                                    <div class="listing-item">
-                                                                        <div class="left-image">
-                                                                            <a href="#"><img src="assets/images/listing-02.jpg" alt=""></a>
-                                                                            <div class="hover-content">
-                                                                                <div class="main-white-button">
-                                                                                    <a href="contact.html"><i class="fa fa-eye"></i>
-                                                                                        Contact Now</a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="right-content align-self-center">
-                                                                            <a href="#">
-                                                                                <h4>Car Item 5</h4>
-                                                                            </a>
-                                                                            <h6>by: Sale Agent</h6>
-                                                                            <span class="price">
-                                                                                <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $550 / month
-                                                                                included tax
-                                                                            </span>
-                                                                            <span class="details">Details: <em>860 sq
-                                                                                    ft</em></span>
-                                                                            <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-12">
-                                                                    <div class="listing-item">
-                                                                        <div class="left-image">
-                                                                            <a href="#"><img src="assets/images/listing-06.jpg" alt=""></a>
-                                                                            <div class="hover-content">
-                                                                                <div class="main-white-button">
-                                                                                    <a href="contact.html"><i class="fa fa-eye"></i>
-                                                                                        Contact Now</a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="right-content align-self-center">
-                                                                            <a href="#">
-                                                                                <h4>Car Item 6</h4>
-                                                                            </a>
-                                                                            <h6>by: Sale Agent</h6>
-                                                                            <span class="price">
-                                                                                <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $440 / month
-                                                                                included tax
-                                                                            </span>
-                                                                            <span class="details">Details: <em>860 sq
-                                                                                    ft</em></span>
-                                                                            <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-                                                                        </div>
-                                                                    </div>
+
+                                                                    <?php } ?>
                                                                 </div>
                                                             </div>
                                                         </div>
-
-                                                        <!-- third category third page -->
-                                                        <!-- NONE -->
-
 
                                                     </div>
                                                 </div>
                                             </div>
                                         </li>
-
-                                        <!-- 4th category 1st page -->
-                                        <li>
-                                            <div>
-                                                <div class="col-lg-12">
-                                                    <div class="owl-carousel owl-listing">
-                                                        <div class="item">
-                                                            <div class="row">
-                                                                <div class="col-lg-12">
-                                                                    <div class="listing-item">
-                                                                        <div class="left-image">
-                                                                            <a href="#"><img src="assets/images/listing-06.jpg" alt=""></a>
-                                                                            <div class="hover-content">
-                                                                                <div class="main-white-button">
-                                                                                    <a href="contact.html"><i class="fa fa-eye"></i>
-                                                                                        Contact Now</a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="right-content align-self-center">
-                                                                            <a href="#">
-                                                                                <h4>Traveling Item 1</h4>
-                                                                            </a>
-                                                                            <h6>by: Travel Agent</h6>
-                                                                            <span class="price">
-                                                                                <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $400 / month
-                                                                                included tax
-                                                                            </span>
-                                                                            <span class="details">Details: <em>860 sq
-                                                                                    ft</em></span>
-                                                                            <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-12">
-                                                                    <div class="listing-item">
-                                                                        <div class="left-image">
-                                                                            <a href="#"><img src="assets/images/listing-04.jpg" alt=""></a>
-                                                                            <div class="hover-content">
-                                                                                <div class="main-white-button">
-                                                                                    <a href="contact.html"><i class="fa fa-eye"></i>
-                                                                                        Contact Now</a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="right-content align-self-center">
-                                                                            <a href="#">
-                                                                                <h4>Traveling Item 2</h4>
-                                                                            </a>
-                                                                            <h6>by: Travel Agent</h6>
-                                                                            <span class="price">
-                                                                                <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $500 / month
-                                                                                included tax
-                                                                            </span>
-                                                                            <span class="details">Details: <em>860 sq
-                                                                                    ft</em></span>
-                                                                            <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-12">
-                                                                    <div class="listing-item">
-                                                                        <div class="left-image">
-                                                                            <a href="#"><img src="assets/images/listing-03.jpg" alt=""></a>
-                                                                            <div class="hover-content">
-                                                                                <div class="main-white-button">
-                                                                                    <a href="contact.html"><i class="fa fa-eye"></i>
-                                                                                        Contact Now</a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="right-content align-self-center">
-                                                                            <a href="#">
-                                                                                <h4>Traveling Item 3</h4>
-                                                                            </a>
-                                                                            <h6>by: Travel Agent</h6>
-                                                                            <span class="price">
-                                                                                <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $342 / month
-                                                                                included tax
-                                                                            </span>
-                                                                            <span class="details">Details: <em>860 sq
-                                                                                    ft</em></span>
-                                                                            <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <!-- 4th category 2nd page -->
-                                                        <div class="item">
-                                                            <div class="row">
-                                                                <div class="col-lg-12">
-                                                                    <div class="listing-item">
-                                                                        <div class="left-image">
-                                                                            <a href="#"><img src="assets/images/listing-05.jpg" alt=""></a>
-                                                                            <div class="hover-content">
-                                                                                <div class="main-white-button">
-                                                                                    <a href="contact.html"><i class="fa fa-eye"></i>
-                                                                                        Contact Now</a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="right-content align-self-center">
-                                                                            <a href="#">
-                                                                                <h4>4th Category 2nd Page</h4>
-                                                                            </a>
-                                                                            <h6>by: Travel Agent</h6>
-                                                                            <span class="price">
-                                                                                <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $268 / month
-                                                                                included tax
-                                                                            </span>
-                                                                            <span class="details">Details: <em>860 sq
-                                                                                    ft</em></span>
-                                                                            <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-12">
-                                                                    <div class="listing-item">
-                                                                        <div class="left-image">
-                                                                            <a href="#"><img src="assets/images/listing-06.jpg" alt=""></a>
-                                                                            <div class="hover-content">
-                                                                                <div class="main-white-button">
-                                                                                    <a href="contact.html"><i class="fa fa-eye"></i>
-                                                                                        Contact Now</a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="right-content align-self-center">
-                                                                            <a href="#">
-                                                                                <h4>Traveling Item 5</h4>
-                                                                            </a>
-                                                                            <h6>by: Travel Agent</h6>
-                                                                            <span class="price">
-                                                                                <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $145 / month
-                                                                                included tax
-                                                                            </span>
-                                                                            <span class="details">Details: <em>860 sq
-                                                                                    ft</em></span>
-                                                                            <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-12">
-                                                                    <div class="listing-item">
-                                                                        <div class="left-image">
-                                                                            <a href="#"><img src="assets/images/listing-03.jpg" alt=""></a>
-                                                                            <div class="hover-content">
-                                                                                <div class="main-white-button">
-                                                                                    <a href="contact.html"><i class="fa fa-eye"></i>
-                                                                                        Contact Now</a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="right-content align-self-center">
-                                                                            <a href="#">
-                                                                                <h4>Traveling Item 6</h4>
-                                                                            </a>
-                                                                            <h6>by: Travel Agent</h6>
-                                                                            <span class="price">
-                                                                                <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $240 / month
-                                                                                included tax
-                                                                            </span>
-                                                                            <span class="details">Details: <em>860 sq
-                                                                                    ft</em></span>
-                                                                            <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <!-- 4th category 3rd page -->
-                                                        <div class="item">
-                                                            <div class="row">
-                                                                <div class="col-lg-12">
-                                                                    <div class="listing-item">
-                                                                        <div class="left-image">
-                                                                            <a href="#"><img src="assets/images/listing-06.jpg" alt=""></a>
-                                                                            <div class="hover-content">
-                                                                                <div class="main-white-button">
-                                                                                    <a href="contact.html"><i class="fa fa-eye"></i>
-                                                                                        Contact Now</a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="right-content align-self-center">
-                                                                            <a href="#">
-                                                                                <h4>4th Category 3rd Page</h4>
-                                                                            </a>
-                                                                            <h6>by: Travel Agent</h6>
-                                                                            <span class="price">
-                                                                                <div class="icon"><img src="assets/images/listing-icon-01.png" alt=""></div> $360 / month
-                                                                                included tax
-                                                                            </span>
-                                                                            <span class="details">Details: <em>860 sq
-                                                                                    ft</em></span>
-                                                                            <span class="info"><img src="assets/images/listing-icon-02.png" alt=""> 2 Bedrooms<br><img src="assets/images/listing-icon-03.png" alt=""> 3 Bathrooms</span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-
 
                                     </ul>
-
                                 </div>
                             </div>
                         </div>
@@ -964,6 +309,7 @@ https://templatemo.com/tm-564-plot-listing
             </div>
         </div>
     </div>
+
 
     <footer>
         <div class="container">

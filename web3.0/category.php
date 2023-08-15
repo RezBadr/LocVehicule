@@ -8,7 +8,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 
     <title>Plotlist - Listing HTML5 Template</title>
 
@@ -81,8 +83,8 @@ https://templatemo.com/tm-564-plot-listing
             <div class="row">
                 <div class="col-lg-8">
                     <div class="top-text header-text">
-                        <h6>Categories with Simple Tabs</h6>
-                        <h2>We have a wide range of business categories for you</h2>
+                        <h6>Decouvrir Nos Vehicules</h6>
+                        <h2>Nous avons une large gamme de catégories de voitures pour vous</h2>
                     </div>
                 </div>
             </div>
@@ -102,36 +104,37 @@ https://templatemo.com/tm-564-plot-listing
                                     <div class="menu">
                                         <div class="first-thumb active">
                                             <div class="thumb">
-                                                <span class="icon"><img src="assets/images/search-icon-01.png" alt="">
-                                                    <h4>Apartments</h4>
+                                                <span class="icon"><img src="assets/images/suv-de-voiture.png" alt="">
+                                                    <h4>Familiale</h4>
                                                 </span>
                                             </div>
                                         </div>
                                         <div>
                                             <div class="thumb">
-                                                <span class="icon"><img src="assets/images/search-icon-02.png" alt="">
-                                                    <h4>Food &amp; Life</h4>
+                                                <span class="icon"><img src="assets/images/voiture-compacte.png" alt="">
+                                                    <h4>Compacte</h4>
                                                 </span>
                                             </div>
                                         </div>
                                         <div>
                                             <div class="thumb">
-                                                <span class="icon"><img src="assets/images/search-icon-03.png" alt="">
-                                                    <h4>Cars</h4>
+                                                <span class="icon"><img src="assets/images/star.png" alt="">
+                                                    <h4>Premium</h4>
                                                 </span>
                                             </div>
                                         </div>
                                         <div>
                                             <div class="thumb">
-                                                <span class="icon"><img src="assets/images/search-icon-04.png" alt="">
-                                                    <h4>Shopping</h4>
+                                                <span class="icon"><img src="assets/images/voiture-ecologique.png"
+                                                        alt="">
+                                                    <h4>Hybride</h4>
                                                 </span>
                                             </div>
                                         </div>
                                         <div class="last-thumb">
                                             <div class="thumb">
-                                                <span class="icon"><img src="assets/images/search-icon-05.png" alt="">
-                                                    <h4>Traveling</h4>
+                                                <span class="icon"><img src="assets/images/suv.png" alt="">
+                                                    <h4>SUV & 4x4</h4>
                                                 </span>
                                             </div>
                                         </div>
@@ -143,72 +146,58 @@ https://templatemo.com/tm-564-plot-listing
                                             <div>
                                                 <div class="thumb">
                                                     <div class="row">
-                                                        <div class="col-lg-12">
-                                                            <div class="top-content">
-                                                                <div class="row">
-                                                                    <div class="col-lg-6">
-                                                                        <div class="top-icon">
-                                                                            <span class="icon"><img src="assets/images/search-icon-01.png" alt="">
-                                                                                <h4>Apartments</h4>
-                                                                            </span>
+                                                        <div class="album py-5 bg-body-tertiary">
+                                                            <div class="container">
+
+
+                                                                <div
+                                                                    class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                                                                    <?php
+                                                                    include("./assets/php/connection.php");
+                                                                    include("./assets/php/commandes.php");
+                                                                    $cat1 = "Familiale";
+                                                                    $result1 = rechercher_vechicule_categorie($cat1);
+                                                                    while (null !== ($row1 = mysqli_fetch_assoc($result1))) {
+                                                                        $image = base64_encode($row1["image"]);
+                                                                        $marque = $row1["marque"];
+                                                                        $modele = $row1["modele"];
+                                                                        $prix = $row1["dailyPrice"];
+                                                                        $categorie = $row1["categorie"];
+                                                                        $fuelType = $row1["fuelType"];
+                                                                        $idvehicule = $row1["IDvehicule"];
+                                                                    ?>
+
+
+                                                                    <div class="col">
+                                                                        <div class="card shadow-sm">
+                                                                            <img src="data:image/jpeg;base64,<?php echo $image; ?>"
+                                                                                alt="Image"
+                                                                                class="bd-placeholder-img card-img-top"
+                                                                                width="255" height="225">
+                                                                            <div class="card-body">
+                                                                                <h4><?php echo  $marque . '  ' . $modele; ?>
+                                                                                </h4>
+                                                                                <p><?php echo  $categorie . ' | ' . $modele . ' | ' . $fuelType; ?>
+                                                                                </p>
+                                                                                <span
+                                                                                    class="text-body-secondary"><?php echo $prix; ?>
+                                                                                    MAD / Jour</span>
+                                                                                <div
+                                                                                    class="d-flex justify-content-between align-items-center">
+                                                                                    <div class="btn-group" role="group"
+                                                                                        aria-label="Default button group">
+                                                                                        <button type="submit"
+                                                                                            name="reserver"
+                                                                                            class="btn btn-sm btn-outline-secondary"
+                                                                                            onclick="location.href='../resume.php/+<?php echo $idvehicule; ?>'">Réserver
+                                                                                            ce véhicule</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-lg-6">
-                                                                        <div class="main-white-button">
-                                                                            <a href="#"><i class="fa fa-plus"></i> Check
-                                                                                Our Listings</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-12">
-                                                            <div class="description">
-                                                                <div class="row">
-                                                                    <div class="col-lg-9">
-                                                                        <h4>Description for Apartments</h4>
-                                                                        <p>If you feel that Plot Listing HTML template
-                                                                            is useful, please <a rel="nofollow" href="https://www.paypal.me/templatemo" target="_blank">support us</a> a little
-                                                                            via PayPal. You are allowed to use this
-                                                                            template for your commercial websites. You
-                                                                            are NOT allowed to redistribute this
-                                                                            template ZIP file on any Free CSS collection
-                                                                            websites. You may contact us for more
-                                                                            information. Thank you.</p>
-                                                                    </div>
-                                                                    <div class="col-lg-3">
-                                                                        <div class="text-icon">
-                                                                            <h4><img src="assets/images/listing-icon-heading.png" alt=""> Total Listings</h4>
-                                                                        </div>
-                                                                        <span class="list-item">This Week: 200 Listings
-                                                                            &amp; 150 Sales<br>This Month: 1,800
-                                                                            Listings &amp; 1,560 Sales<br>This Year:
-                                                                            16,000 Listings &amp; 14,000 Sales</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-12">
-                                                            <div class="general-info">
-                                                                <div class="row">
-                                                                    <div class="col-lg-12">
-                                                                        <h4>General Info. about Apartments</h4>
-                                                                        <p>Lorem ipsum dolor sit amet, consectetur
-                                                                            adipiscing elit, sed do eiusmod tempor ak
-                                                                            incididunt ut labore et dolore magna aliqua.
-                                                                            Quis ipsum suspendisse ultrices gravidat
-                                                                            doerski. Sed ut perspiciatis unde omnis iste
-                                                                            natus error sit voluptatem accusantium
-                                                                            doloremque.</p>
-                                                                        <span class="list-item">* Listing should have
-                                                                            all the proper documents before being
-                                                                            checked in.
-                                                                            <br>** Listing will be checked by our team
-                                                                            members.
-                                                                            <br>*** After being sold, it should
-                                                                            imediately be removed from our site and
-                                                                            properly monitored.</span>
-                                                                    </div>
+
+                                                                    <?php } ?>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -220,78 +209,60 @@ https://templatemo.com/tm-564-plot-listing
                                             <div>
                                                 <div class="thumb">
                                                     <div class="row">
-                                                        <div class="col-lg-12">
-                                                            <div class="top-content">
-                                                                <div class="row">
-                                                                    <div class="col-lg-6">
-                                                                        <div class="top-icon">
-                                                                            <span class="icon"><img src="assets/images/search-icon-02.png" alt="">
-                                                                                <h4>Food &amp; Life</h4>
-                                                                            </span>
+                                                        <div class="album py-5 bg-body-tertiary">
+                                                            <div class="container">
+
+
+                                                                <div
+                                                                    class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                                                                    <?php
+                                                                    $cat2 = "Citadine";
+                                                                    $result2 = rechercher_vechicule_categorie($cat2);
+                                                                    while (null !== ($vehicule = mysqli_fetch_assoc($result2))) {
+                                                                        $image = base64_encode($vehicule["image"]);
+                                                                        $marque = $vehicule["marque"];
+                                                                        $modele = $vehicule["modele"];
+                                                                        $prix = $vehicule["dailyPrice"];
+                                                                        $categorie = $vehicule["categorie"];
+                                                                        $fuelType = $vehicule["fuelType"];
+                                                                        $idvehicule = $vehicule["IDvehicule"];
+                                                                    ?>
+
+
+                                                                    <div class="col">
+                                                                        <div class="card shadow-sm">
+                                                                            <img src="data:image/jpeg;base64,<?php echo $image; ?>"
+                                                                                alt="Image"
+                                                                                class="bd-placeholder-img card-img-top"
+                                                                                width="255" height="225">
+                                                                            <div class="card-body">
+                                                                                <h4><?php echo  $marque . '  ' . $modele; ?>
+                                                                                </h4>
+                                                                                <p><?php echo  $categorie . ' | ' . $modele . ' | ' . $fuelType; ?>
+                                                                                </p>
+                                                                                <span
+                                                                                    class="text-body-secondary"><?php echo $prix; ?>
+                                                                                    MAD / Jour</span>
+                                                                                <div
+                                                                                    class="d-flex justify-content-between align-items-center">
+                                                                                    <div class="btn-group" role="group"
+                                                                                        aria-label="Default button group">
+                                                                                        <button type="submit"
+                                                                                            name="reserver"
+                                                                                            class="btn btn-sm btn-outline-secondary"
+                                                                                            onclick="location.href='../resume.php/+<?php echo $idvehicule; ?>'">Réserver
+                                                                                            ce véhicule</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-lg-6">
-                                                                        <div class="main-white-button">
-                                                                            <a href="#"><i class="fa fa-plus"></i> Check
-                                                                                Our Listings</a>
-                                                                        </div>
-                                                                    </div>
+
+                                                                    <?php } ?>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-lg-12">
-                                                            <div class="description">
-                                                                <div class="row">
-                                                                    <div class="col-lg-9">
-                                                                        <h4>Description for Food and Life</h4>
-                                                                        <p>Plot Listing template is a responsive website
-                                                                            layout that included four HTML pages. Please
-                                                                            tell your friends about TemplateMo website.
-                                                                            You can download and apply this template for
-                                                                            your dynamic CMS websites.</p>
-                                                                        <br>
-                                                                        <p><strong>Did you know?</strong>
-                                                                            <br>You can get the best free HTML templates
-                                                                            on Too CSS blog. Visit the blog pages and
-                                                                            explore fresh and latest website templates.
-                                                                        </p>
-                                                                    </div>
-                                                                    <div class="col-lg-3">
-                                                                        <div class="text-icon">
-                                                                            <h4><img src="assets/images/listing-icon-heading.png" alt=""> Total Listings</h4>
-                                                                        </div>
-                                                                        <span class="list-item">This Week: 124 Listings
-                                                                            &amp; 84 Sales<br>This Month: 1,040 Listings
-                                                                            &amp; 720 Sales<br>This Year: 10,640
-                                                                            Listings &amp; 9,600 Sales</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-12">
-                                                            <div class="general-info">
-                                                                <div class="row">
-                                                                    <div class="col-lg-12">
-                                                                        <h4>General Info</h4>
-                                                                        <p>Lorem ipsum dolor sit amet, consectetur
-                                                                            adipiscing elit, sed do eiusmod tempor ak
-                                                                            incididunt ut labore et dolore magna aliqua.
-                                                                            Quis ipsum suspendisse ultrices gravidat
-                                                                            doerski. Sed ut perspiciatis unde omnis iste
-                                                                            natus error sit voluptatem accusantium
-                                                                            doloremque.</p>
-                                                                        <span class="list-item">* Listing should have
-                                                                            all the proper documents before being
-                                                                            checked in.
-                                                                            <br>** Listing will be checked by our team
-                                                                            members.
-                                                                            <br>*** After being sold, it should
-                                                                            imediately be removed from our site and
-                                                                            properly monitored.</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -300,48 +271,56 @@ https://templatemo.com/tm-564-plot-listing
                                             <div>
                                                 <div class="thumb">
                                                     <div class="row">
-                                                        <div class="col-lg-12">
-                                                            <div class="top-content">
-                                                                <div class="row">
-                                                                    <div class="col-lg-6">
-                                                                        <div class="top-icon">
-                                                                            <span class="icon"><img src="assets/images/search-icon-03.png" alt="">
-                                                                                <h4>Cars</h4>
-                                                                            </span>
+                                                        <div class="album py-5 bg-body-tertiary">
+                                                            <div class="container">
+
+
+                                                                <div
+                                                                    class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                                                                    <?php
+                                                                    $cat2 = "Premium";
+                                                                    $result2 = rechercher_vechicule_categorie($cat2);
+                                                                    while (null !== ($vehicule = mysqli_fetch_assoc($result2))) {
+                                                                        $image = base64_encode($vehicule["image"]);
+                                                                        $marque = $vehicule["marque"];
+                                                                        $modele = $vehicule["modele"];
+                                                                        $prix = $vehicule["dailyPrice"];
+                                                                        $categorie = $vehicule["categorie"];
+                                                                        $fuelType = $vehicule["fuelType"];
+                                                                        $idvehicule = $vehicule["IDvehicule"];
+                                                                    ?>
+
+
+                                                                    <div class="col">
+                                                                        <div class="card shadow-sm">
+                                                                            <img src="data:image/jpeg;base64,<?php echo $image; ?>"
+                                                                                alt="Image"
+                                                                                class="bd-placeholder-img card-img-top"
+                                                                                width="255" height="225">
+                                                                            <div class="card-body">
+                                                                                <h4><?php echo  $marque . '  ' . $modele; ?>
+                                                                                </h4>
+                                                                                <p><?php echo  $categorie . ' | ' . $modele . ' | ' . $fuelType; ?>
+                                                                                </p>
+                                                                                <span
+                                                                                    class="text-body-secondary"><?php echo $prix; ?>
+                                                                                    MAD / Jour</span>
+                                                                                <div
+                                                                                    class="d-flex justify-content-between align-items-center">
+                                                                                    <div class="btn-group" role="group"
+                                                                                        aria-label="Default button group">
+                                                                                        <button type="submit"
+                                                                                            name="reserver"
+                                                                                            class="btn btn-sm btn-outline-secondary"
+                                                                                            onclick="location.href='../resume.php/+<?php echo $idvehicule; ?>'">Réserver
+                                                                                            ce véhicule</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-lg-6">
-                                                                        <div class="main-white-button">
-                                                                            <a href="#"><i class="fa fa-plus"></i> Check
-                                                                                Our Listings</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-12">
-                                                            <div class="description">
-                                                                <div class="row">
-                                                                    <div class="col-lg-9">
-                                                                        <h4>Description about cars</h4>
-                                                                        <p>Lorem ipsum dolor sit amet, consectetur
-                                                                            adipiscing elit, sed do eiusmod tempor ak
-                                                                            incididunt ut labore et dolore magna aliqua.
-                                                                            Quis ipsum suspendisse ultrices gravidat
-                                                                            doerski. Sed ut perspiciatis unde omnis iste
-                                                                            natus error sit voluptatem accusantium
-                                                                            doloremque laudantium, totam rem aperiam,
-                                                                            eaque ipsa quae ab illo.</p>
-                                                                    </div>
-                                                                    <div class="col-lg-3">
-                                                                        <div class="text-icon">
-                                                                            <h4><img src="assets/images/listing-icon-heading.png" alt=""> Total Listings</h4>
-                                                                        </div>
-                                                                        <span class="list-item">This Week: 800 Listings
-                                                                            &amp; 400 Sales<br>This Month: 1,600
-                                                                            Listings &amp; 1,200 Sales<br>This Year:
-                                                                            14,000 Listings &amp; 12,000 Sales</span>
-                                                                    </div>
+
+                                                                    <?php } ?>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -377,72 +356,58 @@ https://templatemo.com/tm-564-plot-listing
                                             <div>
                                                 <div class="thumb">
                                                     <div class="row">
-                                                        <div class="col-lg-12">
-                                                            <div class="top-content">
-                                                                <div class="row">
-                                                                    <div class="col-lg-6">
-                                                                        <div class="top-icon">
-                                                                            <span class="icon"><img src="assets/images/search-icon-04.png" alt="">
-                                                                                <h4>Shopping</h4>
-                                                                            </span>
+                                                        <div class="album py-5 bg-body-tertiary">
+                                                            <div class="container">
+
+
+                                                                <div
+                                                                    class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                                                                    <?php
+
+                                                                    $req = $mysqli->prepare("SELECT * FROM vehicle WHERE  fuelType = 'Hybride' GROUP BY modele ORDER BY IDvehicule;");
+                                                                    $req->execute();
+                                                                    $result = $req->get_result();
+                                                                    while (null !== ($vehicule = mysqli_fetch_assoc($result))) {
+                                                                        $image = base64_encode($vehicule["image"]);
+                                                                        $marque = $vehicule["marque"];
+                                                                        $modele = $vehicule["modele"];
+                                                                        $prix = $vehicule["dailyPrice"];
+                                                                        $categorie = $vehicule["categorie"];
+                                                                        $fuelType = $vehicule["fuelType"];
+                                                                        $idvehicule = $vehicule["IDvehicule"];
+                                                                    ?>
+
+
+                                                                    <div class="col">
+                                                                        <div class="card shadow-sm">
+                                                                            <img src="data:image/jpeg;base64,<?php echo $image; ?>"
+                                                                                alt="Image"
+                                                                                class="bd-placeholder-img card-img-top"
+                                                                                width="255" height="225">
+                                                                            <div class="card-body">
+                                                                                <h4><?php echo  $marque . '  ' . $modele; ?>
+                                                                                </h4>
+                                                                                <p><?php echo  $categorie . ' | ' . $modele . ' | ' . $fuelType; ?>
+                                                                                </p>
+                                                                                <span
+                                                                                    class="text-body-secondary"><?php echo $prix; ?>
+                                                                                    MAD / Jour</span>
+                                                                                <div
+                                                                                    class="d-flex justify-content-between align-items-center">
+                                                                                    <div class="btn-group" role="group"
+                                                                                        aria-label="Default button group">
+                                                                                        <button type="submit"
+                                                                                            name="reserver"
+                                                                                            class="btn btn-sm btn-outline-secondary"
+                                                                                            onclick="location.href='../resume.php/+<?php echo $idvehicule; ?>'">Réserver
+                                                                                            ce véhicule</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-lg-6">
-                                                                        <div class="main-white-button">
-                                                                            <a href="#"><i class="fa fa-plus"></i> Check
-                                                                                Our Listings</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-12">
-                                                            <div class="description">
-                                                                <div class="row">
-                                                                    <div class="col-lg-9">
-                                                                        <h4>Description about Shopping</h4>
-                                                                        <p>Lorem ipsum dolor sit amet, consectetur
-                                                                            adipiscing elit, sed do eiusmod tempor ak
-                                                                            incididunt ut labore et dolore magna aliqua.
-                                                                            Quis ipsum suspendisse ultrices gravidat
-                                                                            doerski. Sed ut perspiciatis unde omnis iste
-                                                                            natus error sit voluptatem accusantium
-                                                                            doloremque laudantium, totam rem aperiam,
-                                                                            eaque ipsa quae ab illo.</p>
-                                                                    </div>
-                                                                    <div class="col-lg-3">
-                                                                        <div class="text-icon">
-                                                                            <h4><img src="assets/images/listing-icon-heading.png" alt=""> Total Listings</h4>
-                                                                        </div>
-                                                                        <span class="list-item">This Week: 150 Listings
-                                                                            &amp; 140 Sales<br>This Month: 1,500
-                                                                            Listings &amp; 1,100 Sales<br>This Year:
-                                                                            15,000 Listings &amp; 14,000 Sales</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-12">
-                                                            <div class="general-info">
-                                                                <div class="row">
-                                                                    <div class="col-lg-12">
-                                                                        <h4>General Info. for Shopping</h4>
-                                                                        <p>Lorem ipsum dolor sit amet, consectetur
-                                                                            adipiscing elit, sed do eiusmod tempor ak
-                                                                            incididunt ut labore et dolore magna aliqua.
-                                                                            Quis ipsum suspendisse ultrices gravidat
-                                                                            doerski. Sed ut perspiciatis unde omnis iste
-                                                                            natus error sit voluptatem accusantium
-                                                                            doloremque.</p>
-                                                                        <span class="list-item">* Listing should have
-                                                                            all the proper documents before being
-                                                                            checked in.
-                                                                            <br>** Listing will be checked by our team
-                                                                            members.
-                                                                            <br>*** After being sold, it should
-                                                                            imediately be removed from our site and
-                                                                            properly monitored.</span>
-                                                                    </div>
+
+                                                                    <?php } ?>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -454,72 +419,56 @@ https://templatemo.com/tm-564-plot-listing
                                             <div>
                                                 <div class="thumb">
                                                     <div class="row">
-                                                        <div class="col-lg-12">
-                                                            <div class="top-content">
-                                                                <div class="row">
-                                                                    <div class="col-lg-6">
-                                                                        <div class="top-icon">
-                                                                            <span class="icon"><img src="assets/images/search-icon-05.png" alt="">
-                                                                                <h4>Traveling</h4>
-                                                                            </span>
+                                                        <div class="album py-5 bg-body-tertiary">
+                                                            <div class="container">
+
+
+                                                                <div
+                                                                    class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                                                                    <?php
+                                                                    $cat2 = "SUV & 4x4";
+                                                                    $result2 = rechercher_vechicule_categorie($cat2);
+                                                                    while (null !== ($vehicule = mysqli_fetch_assoc($result2))) {
+                                                                        $image = base64_encode($vehicule["image"]);
+                                                                        $marque = $vehicule["marque"];
+                                                                        $modele = $vehicule["modele"];
+                                                                        $prix = $vehicule["dailyPrice"];
+                                                                        $categorie = $vehicule["categorie"];
+                                                                        $fuelType = $vehicule["fuelType"];
+                                                                        $idvehicule = $vehicule["IDvehicule"];
+                                                                    ?>
+
+
+                                                                    <div class="col">
+                                                                        <div class="card shadow-sm">
+                                                                            <img src="data:image/jpeg;base64,<?php echo $image; ?>"
+                                                                                alt="Image"
+                                                                                class="bd-placeholder-img card-img-top"
+                                                                                width="255" height="225">
+                                                                            <div class="card-body">
+                                                                                <h4><?php echo  $marque . '  ' . $modele; ?>
+                                                                                </h4>
+                                                                                <p><?php echo  $categorie . ' | ' . $modele . ' | ' . $fuelType; ?>
+                                                                                </p>
+                                                                                <span
+                                                                                    class="text-body-secondary"><?php echo $prix; ?>
+                                                                                    MAD / Jour</span>
+                                                                                <div
+                                                                                    class="d-flex justify-content-between align-items-center">
+                                                                                    <div class="btn-group" role="group"
+                                                                                        aria-label="Default button group">
+                                                                                        <button type="submit"
+                                                                                            name="reserver"
+                                                                                            class="btn btn-sm btn-outline-secondary"
+                                                                                            onclick="location.href='../resume.php/+<?php echo $idvehicule; ?>'">Réserver
+                                                                                            ce véhicule</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-lg-6">
-                                                                        <div class="main-white-button">
-                                                                            <a href="#"><i class="fa fa-plus"></i> Check
-                                                                                Our Listings</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-12">
-                                                            <div class="description">
-                                                                <div class="row">
-                                                                    <div class="col-lg-9">
-                                                                        <h4>Description of Traveling</h4>
-                                                                        <p>Lorem ipsum dolor sit amet, consectetur
-                                                                            adipiscing elit, sed do eiusmod tempor ak
-                                                                            incididunt ut labore et dolore magna aliqua.
-                                                                            Quis ipsum suspendisse ultrices gravidat
-                                                                            doerski. Sed ut perspiciatis unde omnis iste
-                                                                            natus error sit voluptatem accusantium
-                                                                            doloremque laudantium, totam rem aperiam,
-                                                                            eaque ipsa quae ab illo.</p>
-                                                                    </div>
-                                                                    <div class="col-lg-3">
-                                                                        <div class="text-icon">
-                                                                            <h4><img src="assets/images/listing-icon-heading.png" alt=""> Total Listings</h4>
-                                                                        </div>
-                                                                        <span class="list-item">This Week: 200 Listings
-                                                                            &amp; 120 Sales<br>This Month: 1,400
-                                                                            Listings &amp; 900 Sales<br>This Year:
-                                                                            14,000 Listings &amp; 12,000 Sales</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-12">
-                                                            <div class="general-info">
-                                                                <div class="row">
-                                                                    <div class="col-lg-12">
-                                                                        <h4>General Info. about Traveling</h4>
-                                                                        <p>Lorem ipsum dolor sit amet, consectetur
-                                                                            adipiscing elit, sed do eiusmod tempor ak
-                                                                            incididunt ut labore et dolore magna aliqua.
-                                                                            Quis ipsum suspendisse ultrices gravidat
-                                                                            doerski. Sed ut perspiciatis unde omnis iste
-                                                                            natus error sit voluptatem accusantium
-                                                                            doloremque.</p>
-                                                                        <span class="list-item">* Listing should have
-                                                                            all the proper documents before being
-                                                                            checked in.
-                                                                            <br>** Listing will be checked by our team
-                                                                            members.
-                                                                            <br>*** After being sold, it should
-                                                                            imediately be removed from our site and
-                                                                            properly monitored.</span>
-                                                                    </div>
+
+                                                                    <?php } ?>
                                                                 </div>
                                                             </div>
                                                         </div>

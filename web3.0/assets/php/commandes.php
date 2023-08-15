@@ -24,6 +24,20 @@ if (function_exists("rechecher_vehicule") === FALSE) {
             $result = $stmt->get_result();
 
             return $result;
+            $stmt->close();
+        }
+    }
+}
+if (function_exists("rechecher_vehicule_categorie") === FALSE) {
+    function rechercher_vechicule_categorie($categorie)
+    {
+        if (require("connection.php")) {
+            $stmt = $mysqli->prepare("SELECT * FROM vehicle WHERE  categorie = ? GROUP BY fuelType,modele ORDER BY IDvehicule;");
+            $stmt->bind_param("s", $categorie);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            return $result;
+            $stmt->close();
         }
     }
 }

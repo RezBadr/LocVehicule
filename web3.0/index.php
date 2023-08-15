@@ -193,7 +193,8 @@ https://templatemo.com/tm-564-plot-listing
                                                     <div class="row">
                                                         <div class="col-lg-5 align-self-center">
                                                             <div class="left-text">
-                                                                <h4>Nos agences de location </h4>
+                                                                <h4>location de voiture à l'aéroport
+                                                                </h4>
                                                                 <p>
                                                                     Agence Rabat aeroport <br>
                                                                     Agence Marrakech aeroport <br>
@@ -201,19 +202,17 @@ https://templatemo.com/tm-564-plot-listing
                                                                     Agence Casablanca aeroport <br>
                                                                     Agence Fes aeroport <br>
                                                                     Agence Agadir aeroport <br>
-                                                                    Agence Ourzazate aeroport <br>
                                                                     Agence Essaouira aeroport <br>
-                                                                    Agence Nador aeroport <br>
-
+                                                                    Agence Oujda aeroport <br>
 
                                                                 </p>
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-5 align-self-center">
                                                             <div class="left-text">
-                                                                <h4> de voiture au Maroc</h4>
+                                                                <h4> location de voiture en ville</h4>
                                                                 <p>
-                                                                    Agence Oujda aeroport <br>
+
                                                                     Agence Taza <br>
                                                                     Agence Meknes <br>
                                                                     Agence Ifrane <br>
