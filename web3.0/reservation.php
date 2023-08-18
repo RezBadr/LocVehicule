@@ -6,7 +6,10 @@ $idreservation = explode("/?", $link)[1];
 
 $resultat = afficher_reservation($idreservation);
 $nbr_jour = $resultat['nombreJours'];
-
+$dateDepart = $resultat['DateDepart'];
+$agenceDepart = $resultat['AgenceDepart'];
+$dateRetour = $resultat['DateRetour'];
+$agenceRetour = $resultat['AgenceRetour'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,6 +18,7 @@ $nbr_jour = $resultat['nombreJours'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     <title>Réservation - GetCarNow</title>
     <link rel="stylesheet" href="styles.css">
@@ -91,12 +95,68 @@ $nbr_jour = $resultat['nombreJours'];
         .bd-mode-toggle {
             z-index: 1500;
         }
+
+        header .col {
+            border: #8d99af 1px solid
+        }
+
+        header .d-flex {
+            color: #8d99af;
+            border-bottom: #8d99af 1px solid;
+        }
+
+        .info h4 {
+            font-size: x-large;
+            font-family: Times, serif;
+            color: rgba(0, 0, 0, .5);
+        }
     </style>
 </head>
 
 <body>
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex justify-content-evenly">
+                        <i class="bi bi-check-circle-fill d-flex align-items-center"></i>
+                        <h3 class="text-center">DATES ET AGENCES</h3>
+                    </div>
+                    <div class="d-flex justify-content-around">
+                        <div class="info">
+                            <p>Date et agence de depart : </p>
+                            <h4><?php echo $dateDepart; ?></h4>
+                            <p><i class="bi bi-arrow-return-right"></i><?php echo $agenceDepart; ?></p>
+                        </div>
+                        <div class="info">
+                            <p>Date et agence de retour : </p>
+                            <h4><?php echo $dateRetour; ?></h4>
+                            <p><i class="bi bi-arrow-return-right"></i><?php echo $agenceRetour; ?></p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col">
+                    <div class="d-flex justify-content-evenly">
+                        <i class="bi bi-2-circle-fill d-flex align-items-center"></i>
+                        <h3 class="text-center">VEHICULE</h3>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="d-flex justify-content-evenly">
+                        <i class="bi bi-3-circle d-flex align-items-center"></i>
+                        <h3 class="text-center">RÉSUMÉ</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
 
     <main>
+
+        <h1 class="text-center">Choisissez votre véhicule</h1>
+        <br>
         <div class="album py-5 bg-body-tertiary">
             <div class="container">
 

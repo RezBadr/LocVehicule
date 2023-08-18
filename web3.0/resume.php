@@ -17,20 +17,22 @@ $categorie = $vehicule["categorie"];
 $fuelType = $vehicule["fuelType"];
 $prix_jr = $vehicule["dailyPrice"];
 
-$datedepart = $resultat["DateDepart"];
-$agence = $resultat["agence"];
-$dateretour = $resultat["DateRetour"];
+$dateDepart = $resultat["DateDepart"];
+$agenceDepart = $resultat["AgenceDepart"];
+$dateRetour = $resultat["DateRetour"];
+$agenceRetour = $resultat["DateRetour"];
 $TTC = $prix_jr * $nbrJrs;
 $TVA = $TTC * 0.2;
 $HT = $TTC - $TVA;
 
-ajouter_reservation($idveh, $TTC, $idreservation);
+
 
 
 
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 
 <head>
 
@@ -42,6 +44,7 @@ ajouter_reservation($idveh, $TTC, $idreservation);
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <title>Resume</title>
 
@@ -61,9 +64,68 @@ TemplateMo 564 Plot Listing
 https://templatemo.com/tm-564-plot-listing
 
 -->
+    <style>
+    header .col {
+        border: #8d99af 2px solid
+    }
+
+    header .d-flex {
+        color: #8d99af;
+        border-bottom: #8d99af 1px solid;
+    }
+
+    .info h4 {
+        font-size: x-large;
+        font-family: Times, serif;
+        color: rgba(0, 0, 0, .5);
+    }
+    </style>
 </head>
 
 <body>
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex justify-content-evenly">
+                        <i class="bi bi-check-circle-fill d-flex align-items-center"></i>
+                        <h3 class="text-center">DATES ET AGENCES</h3>
+                    </div>
+                    <div class="d-flex justify-content-around">
+                        <div class="info">
+                            <p>Date et agence de depart : </p>
+                            <h4><?php echo $dateDepart; ?></h4>
+                            <p><i class="bi bi-arrow-return-right"></i><?php echo $agenceDepart; ?></p>
+                        </div>
+                        <div class="info">
+                            <p>Date et agence de retour : </p>
+                            <h4><?php echo $dateRetour; ?></h4>
+                            <p><i class="bi bi-arrow-return-right"></i><?php echo $agenceRetour; ?></p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col">
+                    <div class="d-flex justify-content-evenly">
+                        <i class="bi bi-check-circle-fill d-flex align-items-center"></i>
+                        <h3 class="text-center">VEHICULE</h3>
+
+                    </div>
+                    <div class="info text-center">
+                        <h4><?php echo $marque; ?><?php echo $modele; ?></h4>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="d-flex justify-content-evenly">
+                        <i class="bi bi-3-circle-fill d-flex align-items-center"></i>
+                        <h3 class="text-center">RÉSUMÉ</h3>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
 
     <!-- ***** Preloader Start ***** -->
     <div id="js-preloader" class="js-preloader">
@@ -101,11 +163,9 @@ https://templatemo.com/tm-564-plot-listing
                                             </li>
                                             <li class="list-group-item d-flex justify-content-between lh-sm">
                                                 <div>
-                                                    <h6 class="my-0">De <?php echo $datedepart; ?> A
-                                                        <?php echo $dateretour; ?></h6>
+                                                    <h6 class="my-0">Nombre totale des jours</h6>
 
-                                                    <small class="text-body-secondary">Agence
-                                                        <?php echo $agence; ?></small>
+
                                                 </div>
                                                 <span class="text-body-secondary"> <?php echo $nbrJrs; ?> jours</span>
                                             </li>
@@ -163,25 +223,55 @@ https://templatemo.com/tm-564-plot-listing
                                 </div>
 
                             </div>
+                            <?php
+
+                            if (isset($_POST['continuer'])) {
+                                $nomUtilisateur = $_POST['nom'];
+                                $prenomUtilisateur = $_POST['prenom'];
+                                $cine = $_POST['cine'];
+                                $telephone = $_POST['tel'];
+                                $email = $_POST['email'];
+                                $ville = $_POST['ville'];
+                                $adresse = $_POST['adresse'];
+                                $codepostale = $_POST['codePostale'];
+                                $codepostale = intval($codepostale);
+
+                                $idutilisateur = ajouter_client($cine, $prenomUtilisateur, $nomUtilisateur, $email, $telephone, $adresse, $ville, $codepostale);
+
+                                ajouter_reservation($idveh, $idutilisateur, $TTC, $idreservation);
+                                echo "
+                                <script>
+                                    location.href = '../paiement.php/?$idreservation';
+                                </script>
+                                ";
+                            }
+                            ?>
+
                             <div class="col-lg-6 align-self-center">
                                 <h3 class="display-6 fw-bold text-body-emphasis">Vos données de réservation</h3>
-                                <form id="contact" action="" method="">
+                                <form id="contact" action="" method="post">
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <fieldset>
-                                                <input type="text" name="name" id="name" placeholder="Nom"
+                                                <input type="text" name="nom" id="name" placeholder="Nom"
                                                     autocomplete="on" required>
                                             </fieldset>
                                         </div>
                                         <div class="col-lg-6">
                                             <fieldset>
-                                                <input type="text" name="surname" id="surname" placeholder="Prenom"
+                                                <input type="text" name="prenom" id="surname" placeholder="Prenom"
                                                     autocomplete="on" required>
                                             </fieldset>
                                         </div>
                                         <div class="col-lg-6">
                                             <fieldset>
                                                 <input type="text" name="cine" id="cine" placeholder="N° CINE"
+                                                    autocomplete="on" required>
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <fieldset>
+                                                <input type="tel" name="tel" id="tel" placeholder="0700000000"
                                                     autocomplete="on" required>
                                             </fieldset>
                                         </div>
@@ -193,7 +283,7 @@ https://templatemo.com/tm-564-plot-listing
                                         </div>
                                         <div class="col-lg-6">
                                             <fieldset>
-                                                <input type="text" name="codePostal" id="codepostal"
+                                                <input type="text" name="codePostale" id="codepostal"
                                                     placeholder="codePostal" autocomplete="on" required>
                                             </fieldset>
                                         </div>
@@ -212,8 +302,9 @@ https://templatemo.com/tm-564-plot-listing
 
                                         <div class="col-lg-12">
                                             <fieldset>
-                                                <button type="submit" id="form-submit" class="main-button "><i
-                                                        class="bi bi-cart-dash-fill"></i>Continuer au checkout</button>
+                                                <button type="submit" id="form-submit" name="continuer"
+                                                    class="main-button "><i class="bi bi-cart-dash-fill"></i>Continuer
+                                                    au checkout</button>
                                             </fieldset>
                                         </div>
                                     </div>
