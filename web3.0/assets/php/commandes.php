@@ -14,6 +14,19 @@ if (function_exists("afficher_vehicule") === FALSE) {
         }
     }
 }
+if (function_exists("afficher_vehicule2") === FALSE) {
+    function afficher_vechicule2()
+    {
+        if (require("connection.php")) {
+            $stmt = $mysqli->prepare("SELECT * FROM vehicle  GROUP BY fuelType,modele ORDER BY IDvehicule;");
+            $stmt->execute();
+
+            $result = $stmt->get_result();
+
+            return $result;
+        }
+    }
+}
 if (function_exists("rechecher_vehicule") === FALSE) {
     function rechercher_vechicule($idveh)
     {
@@ -52,7 +65,7 @@ if (function_exists("ajouter_date_agence") === FALSE) {
     }
 }
 if (function_exists("afficher_date_agence") === FALSE) {
-    function afficher_reservation($idreservation)
+    function afficher_date_agence($idreservation)
     {
         if (require("connection.php")) {
             $req = $mysqli->prepare("SELECT * FROM reservation WHERE IDreservation = ?");
@@ -60,6 +73,17 @@ if (function_exists("afficher_date_agence") === FALSE) {
             $req->bind_param("i", $idreservation);
             $req->execute();
             $resultat = $req->get_result()->fetch_assoc();
+            return $resultat;
+        }
+    }
+}
+if (function_exists("afficher_reservation") === FALSE) {
+    function afficher_reservation()
+    {
+        if (require("connection.php")) {
+            $req = $mysqli->prepare("SELECT * FROM reservation");
+            $req->execute();
+            $resultat = $req->get_result();
             return $resultat;
         }
     }
@@ -94,6 +118,21 @@ if (function_exists("rechercher_utilisateur") === FALSE) {
             $stmt->execute();
             $rslt = $stmt->get_result()->fetch_assoc();
             return $rslt;
+        }
+    }
+}
+
+if (function_exists("ajouter_vehicule") === FALSE) {
+    function ajouter_vehicule($mar, $mod, $img, $cat, $car, $prix, $imm)
+    {
+        if (require('connection.php')) {
+            $st = 1;
+            $stmt = $mysqli->prepare("INSERT INTO `vehicle` (`marque`, `modele`,`image`, `categorie`, `fuelType`, `dailyPrice`, `availabilityStatus`, `immatriculation`) VALUES (?, ?, ?, ?, ?, ?, ?, ?);");
+            $stmt->bind_param("ssbssdis", $mar, $mod, $img, $cat, $car,  $prix, $st, $imm);
+            $stmt->execute();
+            echo "<script>alert('Votre vehicule a été bien enregistré')</script>";
+        } else {
+            echo "erreur";
         }
     }
 }

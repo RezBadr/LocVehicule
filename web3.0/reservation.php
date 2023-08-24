@@ -4,7 +4,7 @@ include("./assets/php/commandes.php");
 $link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 $idreservation = explode("/?", $link)[1];
 
-$resultat = afficher_reservation($idreservation);
+$resultat = afficher_date_agence($idreservation);
 $nbr_jour = $resultat['nombreJours'];
 $dateDepart = $resultat['DateDepart'];
 $agenceDepart = $resultat['AgenceDepart'];

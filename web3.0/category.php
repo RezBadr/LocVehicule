@@ -8,9 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <title>Plotlist - Listing HTML5 Template</title>
 
@@ -64,7 +62,7 @@ https://templatemo.com/tm-564-plot-listing
                             <li><a href="professionnels.php">Professionels</a></li>
                             <li><a href="contact.php">Contactez-nous! </a></li>
                             <li>
-                                <div class="main-white-button"><a href="#">Login</a></div>
+                                <div class="main-white-button"><a href="login.php">Login</a></div>
                             </li>
                         </ul>
                         <a class='menu-trigger'>
@@ -125,8 +123,7 @@ https://templatemo.com/tm-564-plot-listing
                                         </div>
                                         <div>
                                             <div class="thumb">
-                                                <span class="icon"><img src="assets/images/voiture-ecologique.png"
-                                                        alt="">
+                                                <span class="icon"><img src="assets/images/voiture-ecologique.png" alt="">
                                                     <h4>Hybride</h4>
                                                 </span>
                                             </div>
@@ -150,8 +147,7 @@ https://templatemo.com/tm-564-plot-listing
                                                             <div class="container">
 
 
-                                                                <div
-                                                                    class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                                                                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                                                                     <?php
                                                                     include("./assets/php/connection.php");
                                                                     include("./assets/php/commandes.php");
@@ -168,34 +164,25 @@ https://templatemo.com/tm-564-plot-listing
                                                                     ?>
 
 
-                                                                    <div class="col">
-                                                                        <div class="card shadow-sm">
-                                                                            <img src="data:image/jpeg;base64,<?php echo $image; ?>"
-                                                                                alt="Image"
-                                                                                class="bd-placeholder-img card-img-top"
-                                                                                width="255" height="225">
-                                                                            <div class="card-body">
-                                                                                <h4><?php echo  $marque . '  ' . $modele; ?>
-                                                                                </h4>
-                                                                                <p><?php echo  $categorie . ' | ' . $modele . ' | ' . $fuelType; ?>
-                                                                                </p>
-                                                                                <span
-                                                                                    class="text-body-secondary"><?php echo $prix; ?>
-                                                                                    MAD / Jour</span>
-                                                                                <div
-                                                                                    class="d-flex justify-content-between align-items-center">
-                                                                                    <div class="btn-group" role="group"
-                                                                                        aria-label="Default button group">
-                                                                                        <button type="submit"
-                                                                                            name="reserver"
-                                                                                            class="btn btn-sm btn-outline-secondary"
-                                                                                            onclick="location.href='../resume.php/+<?php echo $idvehicule; ?>'">Réserver
-                                                                                            ce véhicule</button>
+                                                                        <div class="col">
+                                                                            <div class="card shadow-sm">
+                                                                                <img src="data:image/jpeg;base64,<?php echo $image; ?>" alt="Image" class="bd-placeholder-img card-img-top" width="255" height="225">
+                                                                                <div class="card-body">
+                                                                                    <h4><?php echo  $marque . '  ' . $modele; ?>
+                                                                                    </h4>
+                                                                                    <p><?php echo  $categorie . ' | ' . $modele . ' | ' . $fuelType; ?>
+                                                                                    </p>
+                                                                                    <span class="text-body-secondary"><?php echo $prix; ?>
+                                                                                        MAD / Jour</span>
+                                                                                    <div class="d-flex justify-content-between align-items-center">
+                                                                                        <div class="btn-group" role="group" aria-label="Default button group">
+                                                                                            <button type="submit" name="reserver" class="btn btn-sm btn-outline-secondary" onclick="location.href='../resume.php/+<?php echo $idvehicule; ?>'">Réserver
+                                                                                                ce véhicule</button>
+                                                                                        </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
 
                                                                     <?php } ?>
                                                                 </div>
@@ -213,8 +200,7 @@ https://templatemo.com/tm-564-plot-listing
                                                             <div class="container">
 
 
-                                                                <div
-                                                                    class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                                                                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                                                                     <?php
                                                                     $cat2 = "Citadine";
                                                                     $result2 = rechercher_vechicule_categorie($cat2);
@@ -229,34 +215,25 @@ https://templatemo.com/tm-564-plot-listing
                                                                     ?>
 
 
-                                                                    <div class="col">
-                                                                        <div class="card shadow-sm">
-                                                                            <img src="data:image/jpeg;base64,<?php echo $image; ?>"
-                                                                                alt="Image"
-                                                                                class="bd-placeholder-img card-img-top"
-                                                                                width="255" height="225">
-                                                                            <div class="card-body">
-                                                                                <h4><?php echo  $marque . '  ' . $modele; ?>
-                                                                                </h4>
-                                                                                <p><?php echo  $categorie . ' | ' . $modele . ' | ' . $fuelType; ?>
-                                                                                </p>
-                                                                                <span
-                                                                                    class="text-body-secondary"><?php echo $prix; ?>
-                                                                                    MAD / Jour</span>
-                                                                                <div
-                                                                                    class="d-flex justify-content-between align-items-center">
-                                                                                    <div class="btn-group" role="group"
-                                                                                        aria-label="Default button group">
-                                                                                        <button type="submit"
-                                                                                            name="reserver"
-                                                                                            class="btn btn-sm btn-outline-secondary"
-                                                                                            onclick="location.href='../resume.php/+<?php echo $idvehicule; ?>'">Réserver
-                                                                                            ce véhicule</button>
+                                                                        <div class="col">
+                                                                            <div class="card shadow-sm">
+                                                                                <img src="data:image/jpeg;base64,<?php echo $image; ?>" alt="Image" class="bd-placeholder-img card-img-top" width="255" height="225">
+                                                                                <div class="card-body">
+                                                                                    <h4><?php echo  $marque . '  ' . $modele; ?>
+                                                                                    </h4>
+                                                                                    <p><?php echo  $categorie . ' | ' . $modele . ' | ' . $fuelType; ?>
+                                                                                    </p>
+                                                                                    <span class="text-body-secondary"><?php echo $prix; ?>
+                                                                                        MAD / Jour</span>
+                                                                                    <div class="d-flex justify-content-between align-items-center">
+                                                                                        <div class="btn-group" role="group" aria-label="Default button group">
+                                                                                            <button type="submit" name="reserver" class="btn btn-sm btn-outline-secondary" onclick="location.href='../resume.php/+<?php echo $idvehicule; ?>'">Réserver
+                                                                                                ce véhicule</button>
+                                                                                        </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
 
                                                                     <?php } ?>
                                                                 </div>
@@ -275,8 +252,7 @@ https://templatemo.com/tm-564-plot-listing
                                                             <div class="container">
 
 
-                                                                <div
-                                                                    class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                                                                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                                                                     <?php
                                                                     $cat2 = "Premium";
                                                                     $result2 = rechercher_vechicule_categorie($cat2);
@@ -291,34 +267,25 @@ https://templatemo.com/tm-564-plot-listing
                                                                     ?>
 
 
-                                                                    <div class="col">
-                                                                        <div class="card shadow-sm">
-                                                                            <img src="data:image/jpeg;base64,<?php echo $image; ?>"
-                                                                                alt="Image"
-                                                                                class="bd-placeholder-img card-img-top"
-                                                                                width="255" height="225">
-                                                                            <div class="card-body">
-                                                                                <h4><?php echo  $marque . '  ' . $modele; ?>
-                                                                                </h4>
-                                                                                <p><?php echo  $categorie . ' | ' . $modele . ' | ' . $fuelType; ?>
-                                                                                </p>
-                                                                                <span
-                                                                                    class="text-body-secondary"><?php echo $prix; ?>
-                                                                                    MAD / Jour</span>
-                                                                                <div
-                                                                                    class="d-flex justify-content-between align-items-center">
-                                                                                    <div class="btn-group" role="group"
-                                                                                        aria-label="Default button group">
-                                                                                        <button type="submit"
-                                                                                            name="reserver"
-                                                                                            class="btn btn-sm btn-outline-secondary"
-                                                                                            onclick="location.href='../resume.php/+<?php echo $idvehicule; ?>'">Réserver
-                                                                                            ce véhicule</button>
+                                                                        <div class="col">
+                                                                            <div class="card shadow-sm">
+                                                                                <img src="data:image/jpeg;base64,<?php echo $image; ?>" alt="Image" class="bd-placeholder-img card-img-top" width="255" height="225">
+                                                                                <div class="card-body">
+                                                                                    <h4><?php echo  $marque . '  ' . $modele; ?>
+                                                                                    </h4>
+                                                                                    <p><?php echo  $categorie . ' | ' . $modele . ' | ' . $fuelType; ?>
+                                                                                    </p>
+                                                                                    <span class="text-body-secondary"><?php echo $prix; ?>
+                                                                                        MAD / Jour</span>
+                                                                                    <div class="d-flex justify-content-between align-items-center">
+                                                                                        <div class="btn-group" role="group" aria-label="Default button group">
+                                                                                            <button type="submit" name="reserver" class="btn btn-sm btn-outline-secondary" onclick="location.href='../resume.php/+<?php echo $idvehicule; ?>'">Réserver
+                                                                                                ce véhicule</button>
+                                                                                        </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
 
                                                                     <?php } ?>
                                                                 </div>
@@ -360,8 +327,7 @@ https://templatemo.com/tm-564-plot-listing
                                                             <div class="container">
 
 
-                                                                <div
-                                                                    class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                                                                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                                                                     <?php
 
                                                                     $req = $mysqli->prepare("SELECT * FROM vehicle WHERE  fuelType = 'Hybride' GROUP BY modele ORDER BY IDvehicule;");
@@ -378,34 +344,25 @@ https://templatemo.com/tm-564-plot-listing
                                                                     ?>
 
 
-                                                                    <div class="col">
-                                                                        <div class="card shadow-sm">
-                                                                            <img src="data:image/jpeg;base64,<?php echo $image; ?>"
-                                                                                alt="Image"
-                                                                                class="bd-placeholder-img card-img-top"
-                                                                                width="255" height="225">
-                                                                            <div class="card-body">
-                                                                                <h4><?php echo  $marque . '  ' . $modele; ?>
-                                                                                </h4>
-                                                                                <p><?php echo  $categorie . ' | ' . $modele . ' | ' . $fuelType; ?>
-                                                                                </p>
-                                                                                <span
-                                                                                    class="text-body-secondary"><?php echo $prix; ?>
-                                                                                    MAD / Jour</span>
-                                                                                <div
-                                                                                    class="d-flex justify-content-between align-items-center">
-                                                                                    <div class="btn-group" role="group"
-                                                                                        aria-label="Default button group">
-                                                                                        <button type="submit"
-                                                                                            name="reserver"
-                                                                                            class="btn btn-sm btn-outline-secondary"
-                                                                                            onclick="location.href='../resume.php/+<?php echo $idvehicule; ?>'">Réserver
-                                                                                            ce véhicule</button>
+                                                                        <div class="col">
+                                                                            <div class="card shadow-sm">
+                                                                                <img src="data:image/jpeg;base64,<?php echo $image; ?>" alt="Image" class="bd-placeholder-img card-img-top" width="255" height="225">
+                                                                                <div class="card-body">
+                                                                                    <h4><?php echo  $marque . '  ' . $modele; ?>
+                                                                                    </h4>
+                                                                                    <p><?php echo  $categorie . ' | ' . $modele . ' | ' . $fuelType; ?>
+                                                                                    </p>
+                                                                                    <span class="text-body-secondary"><?php echo $prix; ?>
+                                                                                        MAD / Jour</span>
+                                                                                    <div class="d-flex justify-content-between align-items-center">
+                                                                                        <div class="btn-group" role="group" aria-label="Default button group">
+                                                                                            <button type="submit" name="reserver" class="btn btn-sm btn-outline-secondary" onclick="location.href='../resume.php/+<?php echo $idvehicule; ?>'">Réserver
+                                                                                                ce véhicule</button>
+                                                                                        </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
 
                                                                     <?php } ?>
                                                                 </div>
@@ -423,8 +380,7 @@ https://templatemo.com/tm-564-plot-listing
                                                             <div class="container">
 
 
-                                                                <div
-                                                                    class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                                                                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                                                                     <?php
                                                                     $cat2 = "SUV & 4x4";
                                                                     $result2 = rechercher_vechicule_categorie($cat2);
@@ -439,34 +395,25 @@ https://templatemo.com/tm-564-plot-listing
                                                                     ?>
 
 
-                                                                    <div class="col">
-                                                                        <div class="card shadow-sm">
-                                                                            <img src="data:image/jpeg;base64,<?php echo $image; ?>"
-                                                                                alt="Image"
-                                                                                class="bd-placeholder-img card-img-top"
-                                                                                width="255" height="225">
-                                                                            <div class="card-body">
-                                                                                <h4><?php echo  $marque . '  ' . $modele; ?>
-                                                                                </h4>
-                                                                                <p><?php echo  $categorie . ' | ' . $modele . ' | ' . $fuelType; ?>
-                                                                                </p>
-                                                                                <span
-                                                                                    class="text-body-secondary"><?php echo $prix; ?>
-                                                                                    MAD / Jour</span>
-                                                                                <div
-                                                                                    class="d-flex justify-content-between align-items-center">
-                                                                                    <div class="btn-group" role="group"
-                                                                                        aria-label="Default button group">
-                                                                                        <button type="submit"
-                                                                                            name="reserver"
-                                                                                            class="btn btn-sm btn-outline-secondary"
-                                                                                            onclick="location.href='../resume.php/+<?php echo $idvehicule; ?>'">Réserver
-                                                                                            ce véhicule</button>
+                                                                        <div class="col">
+                                                                            <div class="card shadow-sm">
+                                                                                <img src="data:image/jpeg;base64,<?php echo $image; ?>" alt="Image" class="bd-placeholder-img card-img-top" width="255" height="225">
+                                                                                <div class="card-body">
+                                                                                    <h4><?php echo  $marque . '  ' . $modele; ?>
+                                                                                    </h4>
+                                                                                    <p><?php echo  $categorie . ' | ' . $modele . ' | ' . $fuelType; ?>
+                                                                                    </p>
+                                                                                    <span class="text-body-secondary"><?php echo $prix; ?>
+                                                                                        MAD / Jour</span>
+                                                                                    <div class="d-flex justify-content-between align-items-center">
+                                                                                        <div class="btn-group" role="group" aria-label="Default button group">
+                                                                                            <button type="submit" name="reserver" class="btn btn-sm btn-outline-secondary" onclick="location.href='../resume.php/+<?php echo $idvehicule; ?>'">Réserver
+                                                                                                ce véhicule</button>
+                                                                                        </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
 
                                                                     <?php } ?>
                                                                 </div>

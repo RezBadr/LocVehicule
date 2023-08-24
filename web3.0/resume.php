@@ -7,7 +7,7 @@ $idveh = explode("+", $link)[2];
 $idreservation = intval($idreservation);
 $idveh = intval($idveh);
 
-$resultat = afficher_reservation($idreservation);
+$resultat = afficher_date_agence($idreservation);
 $vehicule = rechercher_vechicule($idveh)->fetch_assoc();
 $nbrJrs = $resultat['nombreJours'];
 $image = base64_encode($vehicule['image']);
@@ -41,9 +41,7 @@ $HT = $TTC - $TVA;
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <title>Resume</title>
@@ -65,20 +63,20 @@ https://templatemo.com/tm-564-plot-listing
 
 -->
     <style>
-    header .col {
-        border: #8d99af 2px solid
-    }
+        header .col {
+            border: #8d99af 2px solid
+        }
 
-    header .d-flex {
-        color: #8d99af;
-        border-bottom: #8d99af 1px solid;
-    }
+        header .d-flex {
+            color: #8d99af;
+            border-bottom: #8d99af 1px solid;
+        }
 
-    .info h4 {
-        font-size: x-large;
-        font-family: Times, serif;
-        color: rgba(0, 0, 0, .5);
-    }
+        .info h4 {
+            font-size: x-large;
+            font-family: Times, serif;
+            color: rgba(0, 0, 0, .5);
+        }
     </style>
 </head>
 
@@ -149,8 +147,7 @@ https://templatemo.com/tm-564-plot-listing
                                 <div class="container">
                                     <div class="col  order-md-last">
                                         <div class=" d-flex justify-content-between align-items-center mb-3">
-                                            <img src=" data:image/jpeg;base64,<?php echo $image; ?>" alt="" width="90%"
-                                                height="150px">
+                                            <img src=" data:image/jpeg;base64,<?php echo $image; ?>" alt="" width="90%" height="150px">
                                         </div>
                                         <ul class="list-group mb-3">
                                             <li class="list-group-item d-flex justify-content-between lh-sm">
@@ -213,10 +210,8 @@ https://templatemo.com/tm-564-plot-listing
 
                                         <form class="card p-2" method="get">
                                             <div class="input-group">
-                                                <input type="text" name="promocode" class="form-control"
-                                                    placeholder="Promo code">
-                                                <button type="submit" name="promo"
-                                                    class="btn btn-secondary">Redeem</button>
+                                                <input type="text" name="promocode" class="form-control" placeholder="Promo code">
+                                                <button type="submit" name="promo" class="btn btn-secondary">Redeem</button>
                                             </div>
                                         </form>
                                     </div>
@@ -253,57 +248,48 @@ https://templatemo.com/tm-564-plot-listing
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <fieldset>
-                                                <input type="text" name="nom" id="name" placeholder="Nom"
-                                                    autocomplete="on" required>
+                                                <input type="text" name="nom" id="name" placeholder="Nom" autocomplete="on" required>
                                             </fieldset>
                                         </div>
                                         <div class="col-lg-6">
                                             <fieldset>
-                                                <input type="text" name="prenom" id="surname" placeholder="Prenom"
-                                                    autocomplete="on" required>
+                                                <input type="text" name="prenom" id="surname" placeholder="Prenom" autocomplete="on" required>
                                             </fieldset>
                                         </div>
                                         <div class="col-lg-6">
                                             <fieldset>
-                                                <input type="text" name="cine" id="cine" placeholder="N° CINE"
-                                                    autocomplete="on" required>
+                                                <input type="text" name="cine" id="cine" placeholder="N° CINE" autocomplete="on" required>
                                             </fieldset>
                                         </div>
                                         <div class="col-lg-6">
                                             <fieldset>
-                                                <input type="tel" name="tel" id="tel" placeholder="0700000000"
-                                                    autocomplete="on" required>
+                                                <input type="tel" name="tel" id="tel" placeholder="0700000000" autocomplete="on" required>
                                             </fieldset>
                                         </div>
                                         <div class="col-lg-12">
                                             <fieldset>
-                                                <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*"
-                                                    placeholder="Your Email" required="">
+                                                <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
                                             </fieldset>
                                         </div>
                                         <div class="col-lg-6">
                                             <fieldset>
-                                                <input type="text" name="codePostale" id="codepostal"
-                                                    placeholder="codePostal" autocomplete="on" required>
+                                                <input type="text" name="codePostale" id="codepostal" placeholder="codePostal" autocomplete="on" required>
                                             </fieldset>
                                         </div>
                                         <div class="col-lg-6">
                                             <fieldset>
-                                                <input type="text" name="ville" id="ville" placeholder="ville"
-                                                    autocomplete="on" required>
+                                                <input type="text" name="ville" id="ville" placeholder="ville" autocomplete="on" required>
                                             </fieldset>
                                         </div>
                                         <div class="col-lg-12">
                                             <fieldset>
-                                                <input type="text" name="adresse" id="adresse" placeholder="adresse"
-                                                    required="">
+                                                <input type="text" name="adresse" id="adresse" placeholder="adresse" required="">
                                             </fieldset>
                                         </div>
 
                                         <div class="col-lg-12">
                                             <fieldset>
-                                                <button type="submit" id="form-submit" name="continuer"
-                                                    class="main-button "><i class="bi bi-cart-dash-fill"></i>Continuer
+                                                <button type="submit" id="form-submit" name="continuer" class="main-button "><i class="bi bi-cart-dash-fill"></i>Continuer
                                                     au checkout</button>
                                             </fieldset>
                                         </div>
@@ -325,9 +311,7 @@ https://templatemo.com/tm-564-plot-listing
                         <div class="logo">
                             <img src="assets/images/black-logo.png" alt="Plot Listing Template">
                         </div>
-                        <p>If you consider that <a rel="nofollow" href="https://templatemo.com/tm-564-plot-listing"
-                                target="_parent">Plot Listing template</a> is useful for your website, please <a
-                                rel="nofollow" href="https://www.paypal.me/templatemo" target="_blank">support us</a> a
+                        <p>If you consider that <a rel="nofollow" href="https://templatemo.com/tm-564-plot-listing" target="_parent">Plot Listing template</a> is useful for your website, please <a rel="nofollow" href="https://www.paypal.me/templatemo" target="_blank">support us</a> a
                             little via PayPal.</p>
                     </div>
                 </div>

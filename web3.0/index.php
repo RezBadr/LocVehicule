@@ -8,9 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <title>GetCarNow</title>
 
@@ -63,7 +61,7 @@ https://templatemo.com/tm-564-plot-listing
                             <li><a href="professionnels.php">Professionels</a></li>
                             <li><a href="contact.php">Contactez-nous! </a></li>
                             <li>
-                                <div class="main-white-button"><a href="#">Login</a></div>
+                                <div class="main-white-button"><a href="login.php">Login</a></div>
                             </li>
                         </ul>
                         <a class='menu-trigger'>
@@ -96,7 +94,7 @@ https://templatemo.com/tm-564-plot-listing
                         $agenceDepart = $_POST["agence-depart"];
                         $dateRetour = $_POST["date-retour"];
                         $agenceRetour = $_POST["agence-retour"];
-                        //echo "<script>alert('" . $agenceRetour . "')</script>";
+
 
 
                         $startDate = new DateTime($dateDepart); // Date de début
@@ -121,32 +119,27 @@ https://templatemo.com/tm-564-plot-listing
                         <div class="row">
                             <div class="col align-self-center">
                                 <fieldset>
-                                    <input type="date" name="date-depart" id="date-depart" class="searchText"
-                                        placeholder="Date de depart" required>
+                                    <input type="date" name="date-depart" id="date-depart" class="searchText" placeholder="Date de depart" required>
                                 </fieldset>
                             </div>
                             <div class="col align-self-center">
                                 <fieldset>
-                                    <input type="address" name="agence-depart" id="agence-depart" class="searchText"
-                                        placeholder="Agence de depart" autocomplete="on" required>
+                                    <input type="address" name="agence-depart" id="agence-depart" class="searchText" placeholder="Agence de depart" autocomplete="on" required>
                                 </fieldset>
                             </div>
                             <div class="col align-self-center">
                                 <fieldset>
-                                    <input type="date" name="date-retour" id="date-retour" class="searchText"
-                                        placeholder="Date de retour" required>
+                                    <input type="date" name="date-retour" id="date-retour" class="searchText" placeholder="Date de retour" required>
                                 </fieldset>
                             </div>
                             <div class="col align-self-center">
                                 <fieldset>
-                                    <input type="address" name="agence-retour" id="agence-retour" class="searchText"
-                                        placeholder="Agence de retour" autocomplete="on" required>
+                                    <input type="address" name="agence-retour" id="agence-retour" class="searchText" placeholder="Agence de retour" autocomplete="on" required>
                                 </fieldset>
                             </div>
                             <div class="col">
                                 <fieldset>
-                                    <button type="submit" name="trouverVoiture" class="main-button"><i
-                                            class="fa fa-search"></i>Réserver
+                                    <button type="submit" name="trouverVoiture" class="main-button"><i class="fa fa-search"></i>Réserver
                                     </button>
                                 </fieldset>
                             </div>
@@ -155,14 +148,10 @@ https://templatemo.com/tm-564-plot-listing
                 </div>
                 <div class="col-lg-10 offset-lg-1">
                     <ul class="categories">
-                        <li><a href="category.php"><span class="icon"><img src="assets/images/suv-de-voiture.png"
-                                        alt=""></span>Familiale </a></li>
-                        <li><a href="category.php"><span class="icon"><img src="assets/images/voiture-compacte.png"
-                                        alt=""></span> Compacte </a></li>
-                        <li><a href="category.php"><span class="icon"><img src="assets/images/star.png"
-                                        alt=""></span>Premium</a></li>
-                        <li><a href="category.php"><span class="icon"><img src="assets/images/voiture-ecologique.png"
-                                        alt=""></span>Hybride</a></li>
+                        <li><a href="category.php"><span class="icon"><img src="assets/images/suv-de-voiture.png" alt=""></span>Familiale </a></li>
+                        <li><a href="category.php"><span class="icon"><img src="assets/images/voiture-compacte.png" alt=""></span> Compacte </a></li>
+                        <li><a href="category.php"><span class="icon"><img src="assets/images/star.png" alt=""></span>Premium</a></li>
+                        <li><a href="category.php"><span class="icon"><img src="assets/images/voiture-ecologique.png" alt=""></span>Hybride</a></li>
                         <li><a href="category.php"><span class="icon"><img src="assets/images/suv.png" alt=""></span>SUV
                                 & 4x4</a></li>
                     </ul>
@@ -190,23 +179,20 @@ https://templatemo.com/tm-564-plot-listing
                                         </div>
                                         <div>
                                             <div class="thumb">
-                                                <span class="icon"><img src="assets/images/promotions.png"
-                                                        alt=""></span>
+                                                <span class="icon"><img src="assets/images/promotions.png" alt=""></span>
                                                 Promotions
                                             </div>
                                         </div>
                                         <div>
                                             <div class="thumb">
-                                                <span class="icon"><img src="assets/images/loyalty-program.png"
-                                                        alt=""></span>
+                                                <span class="icon"><img src="assets/images/loyalty-program.png" alt=""></span>
                                                 Programme de fidelite
                                             </div>
                                         </div>
 
                                         <div class="last-thumb">
                                             <div class="thumb">
-                                                <span class="icon"><img src="assets/images/remboursement.png"
-                                                        alt=""></span>
+                                                <span class="icon"><img src="assets/images/remboursement.png" alt=""></span>
                                                 Garantie annulation
                                             </div>
                                         </div>
@@ -277,8 +263,7 @@ https://templatemo.com/tm-564-plot-listing
                                                         </div>
                                                         <div class="col-lg-7 align-self-center">
                                                             <div class="right-image">
-                                                                <img src="./assets//images//reduction.jpg"
-                                                                    alt="reduction">
+                                                                <img src="./assets//images//reduction.jpg" alt="reduction">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -294,15 +279,13 @@ https://templatemo.com/tm-564-plot-listing
                                                                 <h4>Programme de fidelite</h4>
                                                                 <p>Gagnez des points a chaque location pour debloquer
                                                                     plusieurs privileges gratuits</p>
-                                                                <div class="main-white-button"><a href="listing.html"><i
-                                                                            class="fa fa-eye"></i> Discover More</a>
+                                                                <div class="main-white-button"><a href="listing.html"><i class="fa fa-eye"></i> Discover More</a>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-7 align-self-center">
                                                             <div class="right-image">
-                                                                <img src="./assets/images/catrefidelite.jpeg"
-                                                                    alt="Programme de fidelite">
+                                                                <img src="./assets/images/catrefidelite.jpeg" alt="Programme de fidelite">
                                                             </div>
                                                         </div>
 
@@ -406,9 +389,7 @@ https://templatemo.com/tm-564-plot-listing
                         <div class="logo">
                             <img src="assets/images/black-logo.png" alt="Plot Listing">
                         </div>
-                        <p>If you consider that <a rel="nofollow" href="https://templatemo.com/tm-564-plot-listing"
-                                target="_parent">Plot Listing template</a> is useful for your website, please <a
-                                rel="nofollow" href="https://www.paypal.me/templatemo" target="_blank">support us</a> a
+                        <p>If you consider that <a rel="nofollow" href="https://templatemo.com/tm-564-plot-listing" target="_parent">Plot Listing template</a> is useful for your website, please <a rel="nofollow" href="https://www.paypal.me/templatemo" target="_blank">support us</a> a
                             little via PayPal.</p>
                     </div>
                 </div>
@@ -469,29 +450,29 @@ https://templatemo.com/tm-564-plot-listing
     <script src="assets/js/imagesloaded.js"></script>
     <script src="assets/js/custom.js"></script>
     <script>
-    const dateDebutInput = document.getElementById('date-depart');
-    const dateFinInput = document.getElementById('date-retour');
+        const dateDebutInput = document.getElementById('date-depart');
+        const dateFinInput = document.getElementById('date-retour');
 
-    // Mettre à jour le min de la date de début à la date d'aujourd'hui
-    const today = new Date().toISOString().split('T')[0];
+        // Mettre à jour le min de la date de début à la date d'aujourd'hui
+        const today = new Date().toISOString().split('T')[0];
 
-    dateDebutInput.min = today;
+        dateDebutInput.min = today;
 
-    // Mettre à jour le min de la date de fin à la date de début + 1 jours
-    dateDebutInput.addEventListener('change', function() {
-        const selectedDate = new Date(this.value);
-        selectedDate.setDate(selectedDate.getDate() + 1);
-        const minDateFin = selectedDate.toISOString().split('T')[0];
-        dateFinInput.min = minDateFin;
-    });
-    // Récupérer les références des inputs
-    const agenceDepartInput = document.getElementById("agence-depart");
-    const agenceRetourInput = document.getElementById("agence-retour");
+        // Mettre à jour le min de la date de fin à la date de début + 1 jours
+        dateDebutInput.addEventListener('change', function() {
+            const selectedDate = new Date(this.value);
+            selectedDate.setDate(selectedDate.getDate() + 1);
+            const minDateFin = selectedDate.toISOString().split('T')[0];
+            dateFinInput.min = minDateFin;
+        });
+        // Récupérer les références des inputs
+        const agenceDepartInput = document.getElementById("agence-depart");
+        const agenceRetourInput = document.getElementById("agence-retour");
 
-    // Ajouter un gestionnaire d'événement pour le changement de valeur dans l'input agence-depart
-    agenceDepartInput.addEventListener("input", function() {
-        agenceRetourInput.value = agenceDepartInput.value; // Copier la valeur
-    });
+        // Ajouter un gestionnaire d'événement pour le changement de valeur dans l'input agence-depart
+        agenceDepartInput.addEventListener("input", function() {
+            agenceRetourInput.value = agenceDepartInput.value; // Copier la valeur
+        });
     </script>
 </body>
 
